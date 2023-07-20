@@ -20,23 +20,12 @@
 # MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations.
 # J. Comput. Chem. 32 (2011), 2319--2327, doi:10.1002/jcc.21787
 #
-from .similarity import hes, ces, dres, \
-    ces_convergence, dres_convergence
+from . import DimensionalityReductionMethod
 
-from .clustering.ClusterCollection import ClusterCollection, Cluster
-from .clustering.ClusteringMethod import *
-from .clustering.cluster import cluster
-from .dimensionality_reduction.DimensionalityReductionMethod import *
-from .dimensionality_reduction.reduce_dimensionality import (
-    reduce_dimensionality)
-from .confdistmatrix import get_distance_matrix
-from .utils import merge_universes
+from .DimensionalityReductionMethod import StochasticProximityEmbeddingNative
 
-__all__ = ['covariance', 'similarity', 'confdistmatrix', 'clustering']
+__all__ = ['StochasticProximityEmbeddingNative']
 
-from MDAnalysis.due import due, Doi
-
-due.cite(Doi("10.1371/journal.pcbi.1004415"),
-         description="ENCORE Ensemble Comparison",
-         path="MDAnalysis.analysis.encore",
-         cite_module=True)
+if DimensionalityReductionMethod.sklearn:
+    from .DimensionalityReductionMethod import PrincipalComponentAnalysis
+    __all__ += ['PrincipalComponentAnalysis']

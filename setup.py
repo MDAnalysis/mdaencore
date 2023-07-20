@@ -4,7 +4,10 @@ Ensemble overlap comparison software for molecular data.
 """
 import os
 import sys
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages, Extension
+from Cython.Build import cythonize
+import numpy as np
+import platform
 
 sys.path.append(os.path.dirname(__file__))
 
@@ -22,6 +25,77 @@ try:
 except:
     long_description = "\n".join(short_description[2:])
 
+
+def extensions(debug=False, use_cython=True):
+    encore_compile_args = ['-std=c99', '-ffast-math', '-funroll-loops',
+                           '-fsigned-zeros']
+
+    cython_linetrace = bool(os.environ.get('CYTHON_TRACE_NOGIL', False))
+
+    define_macros = []
+    if debug:
+        encore_compile_args.extend(['-Wall', '-pedantic'])
+        define_macros.extend([('DEBUG', '1')])
+
+    # encore is sensitive to floating point accuracy, especially on non-x86
+    # to avoid reducing optimisations on everything, we make a set of compile
+    # args specific to encore
+    if platform.machine() == 'aarch64' or platform.machine() == 'ppc64le':
+        encore_compile_args.append('-O1')
+    else:
+        encore_compile_args.append('-O3')
+
+    include_dirs = [np.get_include()]
+
+    mathlib = [] if os.name == 'nt' else ['m']
+
+    encore_utils = Extension('mdaencore.cutils',
+                             sources=['mdaencore/cutils.pyx'],
+                             include_dirs=include_dirs,
+                             define_macros=define_macros,
+                             extra_compile_args=encore_compile_args,
+                             )
+
+    ap_clustering = Extension('mdaencore.clustering.affinityprop',
+                              sources=['mdaencore/clustering/affinityprop.pyx',
+                                       'mdaencore/clustering/src/ap.c'],
+                              include_dirs=include_dirs+['mdaencore/clustering/include'],
+                              libraries=mathlib,
+                              define_macros=define_macros,
+                              extra_compile_args=encore_compile_args)
+
+    spe_dimred = Extension('mdaencore.dimensionality_reduction.stochasticproxembed',
+                           sources=['mdaencore/dimensionality_reduction/stochasticproxembed.pyx',
+                                    'mdaencore/dimensionality_reduction/src/spe.c'],
+                           include_dirs=include_dirs+['mdaencore/dimensionality_reduction/include'],
+                           libraries=mathlib,
+                           define_macros=define_macros,
+                           extra_compile_args=encore_compile_args)
+
+    pre_exts = [encore_utils, ap_clustering, spe_dimred]
+
+    cython_generated = []
+
+    extensions = cythonize(
+        pre_exts,
+        annotate=False,
+        compiler_directives={'linetrace': cython_linetrace,
+                             'embedsignature': False,
+                             'language_level': '3'},
+    )
+
+    if cython_linetrace:
+        print("Cython coverage will be enabled")
+
+    for pre_ext, post_ext in zip(pre_exts, extensions):
+        for source in post_ext.sources:
+            if source not in pre_ext.sources:
+                cython_generated.append(source)
+
+    return extensions, cython_generated
+
+
+exts, cythonfiles = extensions()
 
 setup(
     # Self-descriptive entries which should always be present
@@ -72,5 +146,6 @@ setup(
             "sphinx",
             "sphinx_rtd_theme",
         ]
-    }
+    },
+    ext_modules=exts,
 )

@@ -20,23 +20,43 @@
 # MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations.
 # J. Comput. Chem. 32 (2011), 2319--2327, doi:10.1002/jcc.21787
 #
-from .similarity import hes, ces, dres, \
-    ces_convergence, dres_convergence
+# cython embedsignature=True
 
-from .clustering.ClusterCollection import ClusterCollection, Cluster
-from .clustering.ClusteringMethod import *
-from .clustering.cluster import cluster
-from .dimensionality_reduction.DimensionalityReductionMethod import *
-from .dimensionality_reduction.reduce_dimensionality import (
-    reduce_dimensionality)
-from .confdistmatrix import get_distance_matrix
-from .utils import merge_universes
+"""
+Mixed Cython utils for ENCORE
 
-__all__ = ['covariance', 'similarity', 'confdistmatrix', 'clustering']
+:Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
 
-from MDAnalysis.due import due, Doi
+.. versionadded:: 0.16.0
+"""
 
-due.cite(Doi("10.1371/journal.pcbi.1004415"),
-         description="ENCORE Ensemble Comparison",
-         path="MDAnalysis.analysis.encore",
-         cite_module=True)
+
+import numpy as np
+cimport numpy as np
+import cython
+from libc.math cimport sqrt
+
+np.import_array()
+
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+def PureRMSD(np.ndarray[np.float64_t, ndim=2] coordsi,
+             np.ndarray[np.float64_t, ndim=2] coordsj,
+             int atomsn,
+             np.ndarray[np.float64_t, ndim=1] masses,
+             double summasses):
+
+    cdef  int k
+    cdef double normsum
+
+    normsum = 0.0
+
+    for k in xrange(atomsn):
+        normsum += masses[k] * (
+            (coordsi[k, 0] - coordsj[k, 0])**2 +
+            (coordsi[k, 1] - coordsj[k, 1])**2 +
+            (coordsi[k, 2] - coordsj[k, 2])**2
+        )
+
+    return sqrt(normsum/summasses)

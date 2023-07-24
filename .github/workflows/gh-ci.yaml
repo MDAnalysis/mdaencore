@@ -101,7 +101,7 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest -n 2 -v --cov=mdaencore --cov-report=xml --color=yes mdaencore/tests/
+        pytest -n 2 -v --cov=mdaencore --cov-report=xml --color=yes --pyargs mdaencore
 
     - name: codecov
       if: github.repository == 'MDAnalysis/mdaencore' && github.event_name != 'schedule'

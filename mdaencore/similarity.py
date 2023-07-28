@@ -58,7 +58,6 @@ When using this module in published work please cite :cite:p:`b-Tiberti2015`.
 
 .. bibliography::
     :filter: False
-    :style: MDA
     :keyprefix: b-
     :labelprefix: ᵇ
 

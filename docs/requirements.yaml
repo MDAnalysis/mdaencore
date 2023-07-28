@@ -2,13 +2,12 @@ name: mdaencore-docs
 channels:
 dependencies:
     # Base depends
-  - python
-  - pip
+    - python
+    - pip
 
-  - sphinx<7.0
+    - sphinx<7.0
 
-  - sphinx_rtd_theme
-
-    # Pip-only installs
-  #- pip:
-
+    - sphinx_rtd_theme
+    - sphinxcontrib-bibtex
+    - pip:
+        - msmb_theme

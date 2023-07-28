@@ -27,6 +27,7 @@ except:
 
 
 def extensions(debug=False, use_cython=True):
+    # TODO: remove fast-math?
     encore_compile_args = ['-std=c99', '-ffast-math', '-funroll-loops',
                            '-fsigned-zeros']
 

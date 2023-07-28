@@ -59,4 +59,4 @@ jobs:
       if: github.event_name == 'pull_request'
       with:
         name: pr_docs
-        path: docs/_build/html/
+        path: ./docs/build/

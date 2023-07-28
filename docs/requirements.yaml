@@ -9,5 +9,12 @@ dependencies:
 
     - sphinx_rtd_theme
     - sphinxcontrib-bibtex
+
+    - numpy
+    - scipy
+    - MDAnalysis
+    - MDAnalysisTests
+    - pytest
+    
     - pip:
         - msmb_theme

@@ -54,3 +54,9 @@ jobs:
         publish_dir: ./docs/build
         user_name: 'github-actions'
         user_email: 'github-action@users.noreply.github.com'
+
+    - uses: actions/upload-artifact@v3
+      if: github.event_name == 'pull_request'
+      with:
+        name: pr_docs
+        path: docs/_build/html/

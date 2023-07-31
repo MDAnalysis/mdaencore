@@ -1,7 +1,9 @@
 # Authors
 
-mdaencore was created by MDAnalysis in 2023.
+mdaencore was created by Ian Kenney in 2023, based on the ENCORE code in MDAnalysis 2.5.
+ENCORE was originally written by Matteo Tiberti, Wouter Boomsma, and Tone Bengtsen.
 
+Matteo Tiberti, Elena Papaleo, Tone Bengtsen, Wouter Boomsma, and Kresten Lindorff-Larsen. Encore: software for quantitative ensemble comparison. PLOS Computational Biology, 11(10):1–16, 10 2015. doi:10.1371/journal.pcbi.1004415.
 
 All contributing authors are listed in this file below.
 The repository history at https://github.com/MDAnalysis/mdaencore
@@ -20,4 +22,4 @@ The rules for this file:
 -->
 
 **2023**
-- MDAnalysis <@ianmkenney>
+- Ian Kenney <@ianmkenney>

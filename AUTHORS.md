@@ -31,14 +31,14 @@ The rules for this file:
 
 **2018**
 - Tyler Reddy <tyler.je.reddy@gmail.com>
-- Zeman <zeman@icp.uni-stuttgard.de>
+- Johannes Zeman <zeman@icp.uni-stuttgard.de>
 
 **2019**
 - Matthijs Tadema <M.J.Tadema@protonmail.com>
 
 **2020**
 - Rocco Meli <r.meli@bluemail.ch>
-- shfrz <@shfrz>
+- Faraaz Shah <@shfrz>
 - Irfan Alibay <@IAlibay>
 
 **2021**
@@ -50,5 +50,5 @@ The rules for this file:
 - Estefania Barreto-Ojeda <estefania.barretooje@ucalgary.ca>
 
 **2023**
-- chrispfae <@chrispfae>
+- Christian Pfaendner <@chrispfae>
 - Ian Kenney <@ianmkenney>

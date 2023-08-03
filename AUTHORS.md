@@ -44,6 +44,7 @@ The rules for this file:
 **2021**
 - Philip Loche <ploche@physik.fu-berlin.de>
 - Paarth Thadani <paarth.thadani15@gmail.com>
+- Lily Wang <@lilyminium>
 
 **2022**
 - Aya Alaa <a.m.a09@outlook.com>

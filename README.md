@@ -2,10 +2,24 @@ mdaencore
 ==============================
 [//]: # (Badges)
 
-| **Latest release** | [![Last release tag](https://img.shields.io/github/release-pre/MDAnalysis/mdaencore.svg)](https://github.com/MDAnalysis/mdaencore/releases) ![GitHub commits since latest release (by date) for a branch](https://img.shields.io/github/commits-since/MDAnalysis/mdaencore/latest)  [![Documentation Status](https://readthedocs.org/projects/mdaencore/badge/?version=latest)](https://mdaencore.readthedocs.io/en/latest/?badge=latest)|
-| :------ | :------- |
-| **Status** | [![GH Actions Status](https://github.com/MDAnalysis/mdaencore/actions/workflows/gh-ci.yaml/badge.svg)](https://github.com/MDAnalysis/mdaencore/actions?query=branch%3Amain+workflow%3Agh-ci) [![codecov](https://codecov.io/gh/MDAnalysis/mdaencore/branch/main/graph/badge.svg)](https://codecov.io/gh/MDAnalysis/mdaencore/branch/main) |
-| **Community** | [![License: GPL v2](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://www.gnu.org/licenses/gpl-2.0)  [![Powered by MDAnalysis](https://img.shields.io/badge/powered%20by-MDAnalysis-orange.svg?logoWidth=16&logo=data:image/x-icon;base64,AAABAAEAEBAAAAEAIAAoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJD+XwCY/fEAkf3uAJf97wGT/a+HfHaoiIWE7n9/f+6Hh4fvgICAjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACT/yYAlP//AJ///wCg//8JjvOchXly1oaGhv+Ghob/j4+P/39/f3IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJH8aQCY/8wAkv2kfY+elJ6al/yVlZX7iIiI8H9/f7h/f38UAAAAAAAAAAAAAAAAAAAAAAAAAAB/f38egYF/noqAebF8gYaagnx3oFpUUtZpaWr/WFhY8zo6OmT///8BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAn46Ojv+Hh4b/jouJ/4iGhfcAAADnAAAA/wAAAP8AAADIAAAAAwCj/zIAnf2VAJD/PAAAAAAAAAAAAAAAAICAgNGHh4f/gICA/4SEhP+Xl5f/AwMD/wAAAP8AAAD/AAAA/wAAAB8Aov9/ALr//wCS/Z0AAAAAAAAAAAAAAACBgYGOjo6O/4mJif+Pj4//iYmJ/wAAAOAAAAD+AAAA/wAAAP8AAABhAP7+FgCi/38Axf4fAAAAAAAAAAAAAAAAiIiID4GBgYKCgoKogoB+fYSEgZhgYGDZXl5e/m9vb/9ISEjpEBAQxw8AAFQAAAAAAAAANQAAADcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjo6Mb5iYmP+cnJz/jY2N95CQkO4pKSn/AAAA7gAAAP0AAAD7AAAAhgAAAAEAAAAAAAAAAACL/gsAkv2uAJX/QQAAAAB9fX3egoKC/4CAgP+NjY3/c3Nz+wAAAP8AAAD/AAAA/wAAAPUAAAAcAAAAAAAAAAAAnP4NAJL9rgCR/0YAAAAAfX19w4ODg/98fHz/i4uL/4qKivwAAAD/AAAA/wAAAP8AAAD1AAAAGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALGxsVyqqqr/mpqa/6mpqf9KSUn/AAAA5QAAAPkAAAD5AAAAhQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADkUFBSuZ2dn/3V1df8uLi7bAAAATgBGfyQAAAA2AAAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0AAADoAAAA/wAAAP8AAAD/AAAAWgC3/2AAnv3eAJ/+dgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9AAAA/wAAAP8AAAD/AAAA/wAKDzEAnP3WAKn//wCS/OgAf/8MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAANwAAADtAAAA7QAAAMAAABUMAJn9gwCe/e0Aj/2LAP//AQAAAAAAAAAA)](https://www.mdanalysis.org)|
+| **Latest release** | [![Last release tag][lastreleasetag]][githubreleases] ![GitHub commits since latest release (by date) for a branch][commitssincerelease]  [![Documentation Status][rtdbadge]][rtdurl]|
+| :------            | :-------                                                                                                                                                                             |
+| **Status**         | [![GH Actions Status][actionsbadge]][mainworkflow] [![codecov][codecovbadge]][codecovio]                                                                                             |
+| **Community**      | [![License: GPL v2][licensebadge]][licenseinfo]    [![Powered by MDAnalysis][mdanalysisbadge]][mdaorg]                                                                               |
+
+[lastreleasetag]: https://img.shields.io/github/release-pre/MDAnalysis/mdaencore.svg
+[githubreleases]: https://github.com/MDAnalysis/mdaencore/releases
+[commitssincerelease]: https://img.shields.io/github/commits-since/MDAnalysis/mdaencore/latest
+[rtdbadge]: https://readthedocs.org/projects/mdaencore/badge/?version=latest
+[rtdurl]: https://mdaencore.readthedocs.io/en/latest/?badge=latest
+[mdanalysisbadge]: https://img.shields.io/badge/powered%20by-MDAnalysis-orange.svg?logoWidth=16&logo=data:image/x-icon;base64,AAABAAEAEBAAAAEAIAAoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJD+XwCY/fEAkf3uAJf97wGT/a+HfHaoiIWE7n9/f+6Hh4fvgICAjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACT/yYAlP//AJ///wCg//8JjvOchXly1oaGhv+Ghob/j4+P/39/f3IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJH8aQCY/8wAkv2kfY+elJ6al/yVlZX7iIiI8H9/f7h/f38UAAAAAAAAAAAAAAAAAAAAAAAAAAB/f38egYF/noqAebF8gYaagnx3oFpUUtZpaWr/WFhY8zo6OmT///8BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAn46Ojv+Hh4b/jouJ/4iGhfcAAADnAAAA/wAAAP8AAADIAAAAAwCj/zIAnf2VAJD/PAAAAAAAAAAAAAAAAICAgNGHh4f/gICA/4SEhP+Xl5f/AwMD/wAAAP8AAAD/AAAA/wAAAB8Aov9/ALr//wCS/Z0AAAAAAAAAAAAAAACBgYGOjo6O/4mJif+Pj4//iYmJ/wAAAOAAAAD+AAAA/wAAAP8AAABhAP7+FgCi/38Axf4fAAAAAAAAAAAAAAAAiIiID4GBgYKCgoKogoB+fYSEgZhgYGDZXl5e/m9vb/9ISEjpEBAQxw8AAFQAAAAAAAAANQAAADcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjo6Mb5iYmP+cnJz/jY2N95CQkO4pKSn/AAAA7gAAAP0AAAD7AAAAhgAAAAEAAAAAAAAAAACL/gsAkv2uAJX/QQAAAAB9fX3egoKC/4CAgP+NjY3/c3Nz+wAAAP8AAAD/AAAA/wAAAPUAAAAcAAAAAAAAAAAAnP4NAJL9rgCR/0YAAAAAfX19w4ODg/98fHz/i4uL/4qKivwAAAD/AAAA/wAAAP8AAAD1AAAAGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALGxsVyqqqr/mpqa/6mpqf9KSUn/AAAA5QAAAPkAAAD5AAAAhQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADkUFBSuZ2dn/3V1df8uLi7bAAAATgBGfyQAAAA2AAAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0AAADoAAAA/wAAAP8AAAD/AAAAWgC3/2AAnv3eAJ/+dgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9AAAA/wAAAP8AAAD/AAAA/wAKDzEAnP3WAKn//wCS/OgAf/8MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAANwAAADtAAAA7QAAAMAAABUMAJn9gwCe/e0Aj/2LAP//AQAAAAAAAAAA
+[mdaorg]: https://mdanalysis.org
+[licensebadge]: https://img.shields.io/badge/License-GPLv2-blue.svg
+[licenseinfo]: https://www.gnu.org/licenses/gpl-2.0
+[actionsbadge]: https://github.com/MDAnalysis/mdaencore/actions/workflows/gh-ci.yaml/badge.svg
+[mainworkflow]: https://github.com/MDAnalysis/mdaencore/actions?query=branch%3Amain+workflow%3Agh-ci
+[codecovbadge]: https://codecov.io/gh/MDAnalysis/mdaencore/branch/main/graph/badge.svg
+[codecovio]: https://codecov.io/gh/MDAnalysis/mdaencore/branch/main
 
 Ensemble overlap comparison software for molecular data.
 
@@ -41,7 +55,7 @@ conda env update --name mdaencore --file docs/requirements.yaml
 Build this package from source:
 
 ```
-pip install -e .
+pip install .
 ```
 
 If you want to update your dependencies (which can be risky!), run:
@@ -61,7 +75,8 @@ conda deactivate
 To build the package from source, run:
 
 ```
-pip install -e .
+pip install cython  # this must be done first
+pip install .
 ```
 
 If you want to create a development environment, install

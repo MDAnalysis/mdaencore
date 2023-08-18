@@ -1,13 +1,12 @@
 name: mdaencore-docs
 channels:
+    - default
+    - conda-forge
 dependencies:
     # Base depends
     - python
     - pip
 
-    - sphinx<7.0
-
-    - sphinx_rtd_theme
     - sphinxcontrib-bibtex
 
     - numpy
@@ -15,6 +14,6 @@ dependencies:
     - MDAnalysis
     - MDAnalysisTests
     - pytest
-    
+
     - pip:
-        - msmb_theme
+        - mdanalysis-sphinx-theme

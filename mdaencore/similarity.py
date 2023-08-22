@@ -52,16 +52,6 @@ as well as two methods to evaluate the convergence of trajectories:
 
 When using this module in published work please cite :cite:p:`b-Tiberti2015`.
 
-.. rubric:: References
-
-.. bibliography::
-    :filter: False
-    :keyprefix: b-
-    :labelprefix: ᵇ
-
-    Tiberti2015
-    LindorffLarsen2009
-
 .. _Examples:
 Examples
 ========
@@ -168,6 +158,15 @@ Function reference
 
 .. All functions are included via automodule :members:.
 
+.. rubric:: References
+
+.. bibliography::
+    :filter: False
+    :keyprefix: b-
+    :labelprefix: ᵇ
+
+    Tiberti2015
+    LindorffLarsen2009
 """
 import warnings
 import logging

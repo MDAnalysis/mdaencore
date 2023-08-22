@@ -46,6 +46,7 @@ release = ''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinxcontrib.bibtex',
     'sphinx.ext.autosummary',
     'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
@@ -55,6 +56,8 @@ extensions = [
     'mdanalysis_sphinx_theme',
     'sphinx.ext.extlinks',
 ]
+
+bibtex_bibfiles = ['references.bib']
 
 autosummary_generate = True
 autodoc_mock_imports = [

@@ -22,12 +22,10 @@
 #
 """
 =================================================================================
-Ensemble Similarity Calculations --- :mod:`MDAnalysis.analysis.encore.similarity`
+Ensemble Similarity Calculations --- :mod:`mdaencore.similarity`
 =================================================================================
 
 :Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
-
-.. versionadded:: 0.16.0
 
 The module contains implementations of similarity measures between protein
 ensembles described in :cite:p:`b-LindorffLarsen2009`. The implementation and
@@ -53,17 +51,6 @@ as well as two methods to evaluate the convergence of trajectories:
 + **Dimensionality-reduction based convergence evaluation** : :func:`dres_convergence`
 
 When using this module in published work please cite :cite:p:`b-Tiberti2015`.
-
-.. rubric:: References
-
-.. bibliography::
-    :filter: False
-    :style: MDA
-    :keyprefix: b-
-    :labelprefix: ᵇ
-
-    Tiberti2015
-    LindorffLarsen2009
 
 .. _Examples:
 Examples
@@ -140,7 +127,7 @@ It can then be loaded and reused at a later time instead of being recalculated: 
 
 In addition to the quantitative similarity estimate, the dimensional reduction
 can easily be visualized, see the ``Example`` section in
-:mod:`MDAnalysis.analysis.encore.dimensionality_reduction.reduce_dimensionality`.
+:mod:`mdaencore.dimensionality_reduction.reduce_dimensionality`.
 Due to the stochastic nature of SPE, two identical ensembles will not
 necessarily result in an exactly 0 estimate of the similarity, but will be very
 close. For the same reason, calculating the similarity with the :func:`dres`
@@ -171,6 +158,15 @@ Function reference
 
 .. All functions are included via automodule :members:.
 
+.. rubric:: References
+
+.. bibliography::
+    :filter: False
+    :keyprefix: b-
+    :labelprefix: ᵇ
+
+    Tiberti2015
+    LindorffLarsen2009
 """
 import warnings
 import logging
@@ -1353,7 +1349,7 @@ def dres(ensembles,
 
     In addition to the quantitative similarity estimate, the dimensional
     reduction can easily be visualized, see the ``Example`` section in
-    :mod:`MDAnalysis.analysis.encore.dimensionality_reduction.reduce_dimensionality``
+    :mod:`mdaencore.dimensionality_reduction.reduce_dimensionality``
 
     """
 

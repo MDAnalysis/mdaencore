@@ -27,7 +27,6 @@ Mixed Cython utils for ENCORE
 
 :Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
 
-.. versionadded:: 0.16.0
 """
 
 

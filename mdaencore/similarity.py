@@ -27,8 +27,6 @@ Ensemble Similarity Calculations --- :mod:`mdaencore.similarity`
 
 :Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
 
-.. versionadded:: 0.16.0
-
 The module contains implementations of similarity measures between protein
 ensembles described in :cite:p:`b-LindorffLarsen2009`. The implementation and
 examples are described in :cite:p:`b-Tiberti2015`.

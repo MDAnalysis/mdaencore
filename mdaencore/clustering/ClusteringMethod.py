@@ -30,8 +30,6 @@ others are available only if scikit-learn is installed
 
 :Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
 
-.. versionadded:: 0.16.0
-
 """
 import numpy as np
 import warnings

@@ -21,7 +21,7 @@
 # J. Comput. Chem. 32 (2011), 2319--2327, doi:10.1002/jcc.21787
 #
 """
-bootstrap procedures --- :mod:`MDAnalysis.analysis.ensemble.bootstrap`
+bootstrap procedures --- :mod:`mdaencore.bootstrap`
 ======================================================================
 
 
@@ -29,8 +29,6 @@ The module contains functions for bootstrapping either ensembles (Universe
 objects) or distance matrices, by resampling with replacement.
 
 :Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
-
-.. versionadded:: 0.16.0
 
 """
 import numpy as np

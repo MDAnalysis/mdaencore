@@ -22,7 +22,7 @@
 #
 """
 =================================================================================
-Ensemble Similarity Calculations --- :mod:`MDAnalysis.analysis.encore.similarity`
+Ensemble Similarity Calculations --- :mod:`mdaencore.similarity`
 =================================================================================
 
 :Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
@@ -139,7 +139,7 @@ It can then be loaded and reused at a later time instead of being recalculated: 
 
 In addition to the quantitative similarity estimate, the dimensional reduction
 can easily be visualized, see the ``Example`` section in
-:mod:`MDAnalysis.analysis.encore.dimensionality_reduction.reduce_dimensionality`.
+:mod:`mdaencore.dimensionality_reduction.reduce_dimensionality`.
 Due to the stochastic nature of SPE, two identical ensembles will not
 necessarily result in an exactly 0 estimate of the similarity, but will be very
 close. For the same reason, calculating the similarity with the :func:`dres`
@@ -1352,7 +1352,7 @@ def dres(ensembles,
 
     In addition to the quantitative similarity estimate, the dimensional
     reduction can easily be visualized, see the ``Example`` section in
-    :mod:`MDAnalysis.analysis.encore.dimensionality_reduction.reduce_dimensionality``
+    :mod:`mdaencore.dimensionality_reduction.reduce_dimensionality``
 
     """
 

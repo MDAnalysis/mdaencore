@@ -21,7 +21,7 @@
 # J. Comput. Chem. 32 (2011), 2319--2327, doi:10.1002/jcc.21787
 #
 """
-Distance Matrix calculation --- :mod:`MDAnalysis.analysis.ensemble.confdistmatrix`
+Distance Matrix calculation --- :mod:`mdaencore.confdistmatrix`
 ==================================================================================
 
 
@@ -31,8 +31,6 @@ distance between the structures stored as frames in a Universe. A
 class to compute an RMSD matrix in such a way is also available.
 
 :Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
-
-.. versionadded:: 0.16.0
 
 """
 from joblib import Parallel, delayed

@@ -21,7 +21,7 @@
 # J. Comput. Chem. 32 (2011), 2319--2327, doi:10.1002/jcc.21787
 #
 """
-clustering frontend --- :mod:`MDAnalysis.analysis.encore.clustering.ClusteringMethod`
+clustering frontend --- :mod:`mdaencore.clustering.ClusteringMethod`
 =====================================================================================
 
 The module defines classes for interfacing to various clustering algorithms.

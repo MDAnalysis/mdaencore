@@ -1,0 +1,33 @@
+mdaencore.dimensionality\_reduction
+===================================
+
+.. automodule:: mdaencore.dimensionality_reduction
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   mdaencore.dimensionality_reduction.DimensionalityReductionMethod
+   mdaencore.dimensionality_reduction.reduce_dimensionality
+   mdaencore.dimensionality_reduction.stochasticproxembed
+

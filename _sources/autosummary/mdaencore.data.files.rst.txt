@@ -1,0 +1,23 @@
+mdaencore.data.files
+====================
+
+.. automodule:: mdaencore.data.files
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

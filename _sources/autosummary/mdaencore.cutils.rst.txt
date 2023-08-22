@@ -1,0 +1,29 @@
+mdaencore.cutils
+================
+
+.. automodule:: mdaencore.cutils
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      PureRMSD
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

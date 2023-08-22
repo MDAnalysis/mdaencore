@@ -1,0 +1,39 @@
+mdaencore.utils
+===============
+
+.. automodule:: mdaencore.utils
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      merge_universes
+      trm_indices
+      trm_indices_diag
+      trm_indices_nodiag
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ParallelCalculation
+      TriangularMatrix
+   
+   
+
+   
+   
+   
+
+
+

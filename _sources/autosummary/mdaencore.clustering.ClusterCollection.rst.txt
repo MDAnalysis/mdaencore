@@ -1,0 +1,24 @@
+mdaencore.clustering.ClusterCollection
+======================================
+
+.. currentmodule:: mdaencore.clustering
+
+.. autoclass:: ClusterCollection
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ClusterCollection.__init__
+      ~ClusterCollection.get_centroids
+      ~ClusterCollection.get_ids
+   
+   
+
+   
+   
+   

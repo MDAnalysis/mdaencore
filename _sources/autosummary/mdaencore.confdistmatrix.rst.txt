@@ -1,0 +1,31 @@
+mdaencore.confdistmatrix
+========================
+
+.. automodule:: mdaencore.confdistmatrix
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      conformational_distance_matrix
+      get_distance_matrix
+      set_rmsd_matrix_elements
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

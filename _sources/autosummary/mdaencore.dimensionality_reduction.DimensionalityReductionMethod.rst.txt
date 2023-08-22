@@ -1,0 +1,31 @@
+mdaencore.dimensionality\_reduction.DimensionalityReductionMethod
+=================================================================
+
+.. automodule:: mdaencore.dimensionality_reduction.DimensionalityReductionMethod
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      DimensionalityReductionMethod
+      PrincipalComponentAnalysis
+      StochasticProximityEmbeddingNative
+   
+   
+
+   
+   
+   
+
+
+

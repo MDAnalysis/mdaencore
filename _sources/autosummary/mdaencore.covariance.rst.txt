@@ -1,0 +1,31 @@
+mdaencore.covariance
+====================
+
+.. automodule:: mdaencore.covariance
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      covariance_matrix
+      ml_covariance_estimator
+      shrinkage_covariance_estimator
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

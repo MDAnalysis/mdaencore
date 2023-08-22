@@ -38,5 +38,5 @@ from MDAnalysis.due import due, Doi
 
 due.cite(Doi("10.1371/journal.pcbi.1004415"),
          description="ENCORE Ensemble Comparison",
-         path="MDAnalysis.analysis.encore",
+         path="mdaencore",
          cite_module=True)

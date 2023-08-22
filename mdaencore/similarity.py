@@ -64,7 +64,7 @@ To calculate the Harmonic Ensemble Similarity (:func:`hes`)
 two ensemble objects are first created and then used for calculation:
 
     >>> from MDAnalysis import Universe
-    >>> import MDAnalysis.analysis.encore as encore
+    >>> import mdaencore as encore
     >>> from MDAnalysis.tests.datafiles import PSF, DCD, DCD2
     >>> ens1 = Universe(PSF, DCD)
     >>> ens2 = Universe(PSF, DCD2)
@@ -84,7 +84,7 @@ matrix; a full RMSD matrix between each pairs of elements needs to be computed).
 The RMSD matrix is automatically calculated:
 
     >>> from MDAnalysis import Universe
-    >>> import MDAnalysis.analysis.encore as encore
+    >>> import mdaencore as encore
     >>> from MDAnalysis.tests.datafiles import PSF, DCD, DCD2
     >>> ens1 = Universe(PSF, DCD)
     >>> ens2 = Universe(PSF, DCD2)
@@ -104,7 +104,7 @@ In the following example the dimensions are reduced to 3 using the
 RMSD matrix and the default SPE dimensional reduction method:
 
     >>> from MDAnalysis import Universe
-    >>> import MDAnalysis.analysis.encore as encore
+    >>> import mdaencore as encore
     >>> from MDAnalysis.tests.datafiles import PSF, DCD, DCD2
     >>> ens1 = Universe(PSF, DCD)
     >>> ens2 = Universe(PSF, DCD2)
@@ -798,7 +798,7 @@ def hes(ensembles,
     this changes the ``ens1`` and ``ens2`` objects:
 
         >>> from MDAnalysis import Universe
-        >>> import MDAnalysis.analysis.encore as encore
+        >>> import mdaencore as encore
         >>> from MDAnalysis.tests.datafiles import PSF, DCD, DCD2
         >>> ens1 = Universe(PSF, DCD)
         >>> ens2 = Universe(PSF, DCD2)
@@ -815,7 +815,7 @@ def hes(ensembles,
     manually:
 
         >>> from MDAnalysis import Universe
-        >>> import MDAnalysis.analysis.encore as encore
+        >>> import mdaencore as encore
         >>> from MDAnalysis.tests.datafiles import PSF, DCD, DCD2
         >>> from MDAnalysis.analysis import align
         >>> ens1 = Universe(PSF, DCD)
@@ -981,7 +981,7 @@ def ces(ensembles,
 
     clustering_method :
         A single or a list of instances of the
-        :class:`MDAnalysis.analysis.encore.clustering.ClusteringMethod` classes
+        :class:`mdaencore.clustering.ClusteringMethod` classes
         from the clustering module. Different parameters for the same clustering
         method can be explored by adding different instances of the same
         clustering class. Clustering methods options are the
@@ -1062,7 +1062,7 @@ def ces(ensembles,
     Here the simplest case of just two instances of :class:`Universe` is illustrated:
 
         >>> from MDAnalysis import Universe
-        >>> import MDAnalysis.analysis.encore as encore
+        >>> import mdaencore as encore
         >>> from MDAnalysis.tests.datafiles import PSF, DCD, DCD2
         >>> ens1 = Universe(PSF, DCD)
         >>> ens2 = Universe(PSF, DCD2)
@@ -1338,7 +1338,7 @@ def dres(ensembles,
     illustrated:
 
         >>> from MDAnalysis import Universe
-        >>> import MDAnalysis.analysis.encore as encore
+        >>> import mdaencore as encore
         >>> from MDAnalysis.tests.datafiles import PSF, DCD, DCD2
         >>> ens1 = Universe(PSF,DCD)
         >>> ens2 = Universe(PSF,DCD2)
@@ -1514,7 +1514,7 @@ def ces_convergence(original_ensemble,
     select : str, optional
         Atom selection string in the MDAnalysis format. Default is "name CA"
 
-    clustering_method : MDAnalysis.analysis.encore.clustering.ClusteringMethod
+    clustering_method : mdaencore.clustering.ClusteringMethod
         A single or a list of instances of the ClusteringMethod classes from
         the clustering module. Different parameters for the same clustering
         method can be explored by adding different instances of the same
@@ -1541,7 +1541,7 @@ def ces_convergence(original_ensemble,
     splitting the trajectory into a window_size of 10 frames:
 
         >>> from MDAnalysis import Universe
-        >>> import MDAnalysis.analysis.encore as encore
+        >>> import mdaencore as encore
         >>> from MDAnalysis.tests.datafiles import PSF, DCD, DCD2
         >>> ens1 = Universe(PSF,DCD)
         >>> ces_conv = encore.ces_convergence(ens1, 10)
@@ -1649,7 +1649,7 @@ def dres_convergence(original_ensemble,
     splitting the trajectory into a window_size of 10 frames:
 
         >>> from MDAnalysis import Universe
-        >>> import MDAnalysis.analysis.encore as encore
+        >>> import mdaencore as encore
         >>> from MDAnalysis.tests.datafiles import PSF, DCD, DCD2
         >>> ens1 = Universe(PSF,DCD)
         >>> dres_conv = encore.dres_convergence(ens1, 10)

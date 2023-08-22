@@ -105,7 +105,7 @@ def cluster(ensembles,
     Here, we cluster two ensembles ::
 
         >>> from MDAnalysis import Universe
-        >>> import MDAnalysis.analysis.encore as encore
+        >>> import mdaencore as encore
         >>> from MDAnalysis.tests.datafiles import PSF, DCD, DCD2
         >>> ens1 = Universe(PSF, DCD)
         >>> ens2 = Universe(PSF, DCD2)

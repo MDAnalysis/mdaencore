@@ -66,7 +66,7 @@ def reduce_dimensionality(ensembles,
         repeat the functionality just described - merging ensembles for each
         ensemble in the outer loop.
 
-    method : MDAnalysis.analysis.encore.dimensionality_reduction.DimensionalityReductionMethod or list
+    method : mdaencore.dimensionality_reduction.DimensionalityReductionMethod or list
         A single or a list of instances of the DimensionalityReductionMethod
         classes from the dimensionality_reduction module. A separate analysis
         will be run for each method. Note that different parameters for the
@@ -109,7 +109,7 @@ def reduce_dimensionality(ensembles,
     matplotlib: ::
 
         >>> from MDAnalysis import Universe
-        >>> import MDAnalysis.analysis.encore as encore
+        >>> import mdaencore as encore
         >>> from MDAnalysis.tests.datafiles import PSF, DCD, DCD2
         >>> ens1 = Universe(PSF, DCD)
         >>> ens2 = Universe(PSF, DCD2)

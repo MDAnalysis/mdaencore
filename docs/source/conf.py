@@ -57,6 +57,9 @@ extensions = [
 ]
 
 autosummary_generate = True
+autodoc_mock_imports = [
+    'mdaencore.tests',
+]
 napoleon_google_docstring = False
 napoleon_use_param = False
 napoleon_use_ivar = True

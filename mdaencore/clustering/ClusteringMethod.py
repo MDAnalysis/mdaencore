@@ -21,7 +21,7 @@
 # J. Comput. Chem. 32 (2011), 2319--2327, doi:10.1002/jcc.21787
 #
 """
-clustering frontend --- :mod:`MDAnalysis.analysis.encore.clustering.ClusteringMethod`
+clustering frontend --- :mod:`mdaencore.clustering.ClusteringMethod`
 =====================================================================================
 
 The module defines classes for interfacing to various clustering algorithms.
@@ -29,8 +29,6 @@ One has been implemented natively, and will always be available, while
 others are available only if scikit-learn is installed
 
 :Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
-
-.. versionadded:: 0.16.0
 
 """
 import numpy as np

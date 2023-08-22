@@ -20,6 +20,36 @@ The rules for this file:
   * Please start a new section for each new year
   * Don't ever delete anything
 -->
+**2016**
+- Matteo Tiberti <matteo.tiberti@gmail.com>
+- Tone Bengtsen <tonebengsten@gmail.com>
+- Wouter Boomsma <wb@bio.ku.dk>
+- Richard Gowers <richardjgowers@gmail.com>
+- Oliver Beckstein <orbeckst@gmail.com>
+- Max Linke <max_linke@gmx.de>
+- Jonathan Barnoud <jonathan@barnoud.net>
+
+**2018**
+- Tyler Reddy <tyler.je.reddy@gmail.com>
+- Johannes Zeman <zeman@icp.uni-stuttgard.de>
+
+**2019**
+- Matthijs Tadema <M.J.Tadema@protonmail.com>
+
+**2020**
+- Rocco Meli <r.meli@bluemail.ch>
+- Faraaz Shah <@shfrz>
+- Irfan Alibay <@IAlibay>
+
+**2021**
+- Philip Loche <ploche@physik.fu-berlin.de>
+- Paarth Thadani <paarth.thadani15@gmail.com>
+- Lily Wang <@lilyminium>
+
+**2022**
+- Aya Alaa <a.m.a09@outlook.com>
+- Estefania Barreto-Ojeda <estefania.barretooje@ucalgary.ca>
 
 **2023**
+- Christian Pfaendner <@chrispfae>
 - Ian Kenney <@ianmkenney>

@@ -9,11 +9,13 @@ Welcome to mdaencore's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :hidden:
 
    getting_started
    api
 
 
+The `mdaencore` MDAKit moves the functionality of integrated ENCORE module out of the MDAnalysis core library, thereby deprecating it in MDAnalysis release 2.7.0 with a planned removal in release 3.0.0.
 
 Indices and tables
 ==================

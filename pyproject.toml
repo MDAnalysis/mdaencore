@@ -37,7 +37,7 @@ test = [
 ]
 doc = [
     "sphinx",
-    "sphinx_rtd_theme",
+    "mdanalysis_sphinx_theme",
 ]
 
 # [project.urls]

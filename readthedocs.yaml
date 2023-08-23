@@ -2,14 +2,17 @@
 
 version: 2
 
+sphinx:
+  configuration: docs/source/conf.py
+
 build:
-  os: ubuntu-22.04
+  os: ubuntu-20.04
   tools:
     python: "mambaforge-4.10"
 
 python:
   install:
-    - method: pip
+    - method: setuptools
       path: .
 
 conda:

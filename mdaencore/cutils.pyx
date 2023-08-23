@@ -22,11 +22,8 @@
 #
 # cython embedsignature=True
 
-"""
-Mixed Cython utils for ENCORE
-
-:Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
-
+"""\
+Mixed Cython utils for ENCORE.
 """
 
 

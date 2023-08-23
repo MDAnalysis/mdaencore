@@ -26,9 +26,6 @@ Covariance calculation --- :mod:`encore.covariance`
 
 The module contains functions to estimate the covariance matrix of
 an ensemble of structures.
-
-:Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
-
 """
 import numpy as np
 

@@ -26,9 +26,6 @@ dimensionality reduction frontend --- :mod:`mdaencore.dimensionality_reduction.r
 
 The module defines a function serving as front-end for various dimensionality
 reduction algorithms, wrapping them to allow them to be used interchangably.
-
-:Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
-
 """
 import numpy as np
 from ..confdistmatrix import get_distance_matrix

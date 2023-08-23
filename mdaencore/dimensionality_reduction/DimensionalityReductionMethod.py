@@ -26,10 +26,7 @@ dimensionality reduction frontend --- :mod:`mdaencore.clustering.DimensionalityR
 
 The module defines classes for interfacing to various dimensionality reduction
 algorithms. One has been implemented natively, and will always be available,
-while others are available only if scikit-learn is installed
-
-:Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
-
+while others are available only if scikit-learn is installed.
 """
 import logging
 import warnings

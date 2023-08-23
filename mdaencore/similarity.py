@@ -20,13 +20,7 @@
 # MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations.
 # J. Comput. Chem. 32 (2011), 2319--2327, doi:10.1002/jcc.21787
 #
-"""
-=================================================================================
-Ensemble Similarity Calculations --- :mod:`mdaencore.similarity`
-=================================================================================
-
-:Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
-
+"""\
 The module contains implementations of similarity measures between protein
 ensembles described in :cite:p:`b-LindorffLarsen2009`. The implementation and
 examples are described in :cite:p:`b-Tiberti2015`.

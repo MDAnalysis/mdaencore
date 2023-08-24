@@ -26,7 +26,7 @@ The rules for this file:
 <!-- New added features -->
 
 ### Fixed
-- Removed ffast-math compiler flag (#6)
+- Removed ffast-math compiler flag (PR #14)
 <!-- Bug fixes -->
 
 ### Changed

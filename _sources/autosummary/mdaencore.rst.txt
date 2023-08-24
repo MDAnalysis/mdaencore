@@ -32,7 +32,6 @@
    mdaencore.confdistmatrix
    mdaencore.covariance
    mdaencore.cutils
-   mdaencore.data
    mdaencore.dimensionality_reduction
    mdaencore.similarity
    mdaencore.utils

@@ -10,34 +10,56 @@
   <link rel="shortcut icon" href="_static/logo/mda_favicon.ico">
 </head>
 
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mdaencore.similarity &mdash; mdaencore  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/site.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <meta charset="utf-8">
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mdaencore.similarity &mdash; mdaencore  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/versions.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/site.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/site.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
 
 
 
@@ -59,44 +81,88 @@
 
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
 </ul>
 
+            
+          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">mdaencore</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
-      <li class="breadcrumb-item active">mdaencore.similarity</li>
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>mdaencore.similarity</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <h1>Source code for mdaencore.similarity</h1><div class="highlight"><pre>
 <span></span><span class="c1"># -*- Mode: python; tab-width: 4; indent-tabs-mode:nil; coding:utf-8 -*-</span>
 <span class="c1"># vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4</span>
@@ -120,13 +186,7 @@
 <span class="c1"># MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations.</span>
 <span class="c1"># J. Comput. Chem. 32 (2011), 2319--2327, doi:10.1002/jcc.21787</span>
 <span class="c1">#</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">=================================================================================</span>
-<span class="sd">Ensemble Similarity Calculations --- :mod:`mdaencore.similarity`</span>
-<span class="sd">=================================================================================</span>
-
-<span class="sd">:Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen</span>
-
+<span class="sd">&quot;&quot;&quot;\</span>
 <span class="sd">The module contains implementations of similarity measures between protein</span>
 <span class="sd">ensembles described in :cite:p:`b-LindorffLarsen2009`. The implementation and</span>
 <span class="sd">examples are described in :cite:p:`b-Tiberti2015`.</span>
@@ -164,7 +224,7 @@
 <span class="sd">two ensemble objects are first created and then used for calculation:</span>
 
 <span class="sd">    &gt;&gt;&gt; from MDAnalysis import Universe</span>
-<span class="sd">    &gt;&gt;&gt; import MDAnalysis.analysis.encore as encore</span>
+<span class="sd">    &gt;&gt;&gt; import mdaencore as encore</span>
 <span class="sd">    &gt;&gt;&gt; from MDAnalysis.tests.datafiles import PSF, DCD, DCD2</span>
 <span class="sd">    &gt;&gt;&gt; ens1 = Universe(PSF, DCD)</span>
 <span class="sd">    &gt;&gt;&gt; ens2 = Universe(PSF, DCD2)</span>
@@ -184,7 +244,7 @@
 <span class="sd">The RMSD matrix is automatically calculated:</span>
 
 <span class="sd">    &gt;&gt;&gt; from MDAnalysis import Universe</span>
-<span class="sd">    &gt;&gt;&gt; import MDAnalysis.analysis.encore as encore</span>
+<span class="sd">    &gt;&gt;&gt; import mdaencore as encore</span>
 <span class="sd">    &gt;&gt;&gt; from MDAnalysis.tests.datafiles import PSF, DCD, DCD2</span>
 <span class="sd">    &gt;&gt;&gt; ens1 = Universe(PSF, DCD)</span>
 <span class="sd">    &gt;&gt;&gt; ens2 = Universe(PSF, DCD2)</span>
@@ -204,7 +264,7 @@
 <span class="sd">RMSD matrix and the default SPE dimensional reduction method:</span>
 
 <span class="sd">    &gt;&gt;&gt; from MDAnalysis import Universe</span>
-<span class="sd">    &gt;&gt;&gt; import MDAnalysis.analysis.encore as encore</span>
+<span class="sd">    &gt;&gt;&gt; import mdaencore as encore</span>
 <span class="sd">    &gt;&gt;&gt; from MDAnalysis.tests.datafiles import PSF, DCD, DCD2</span>
 <span class="sd">    &gt;&gt;&gt; ens1 = Universe(PSF, DCD)</span>
 <span class="sd">    &gt;&gt;&gt; ens2 = Universe(PSF, DCD2)</span>
@@ -898,7 +958,7 @@
 <span class="sd">    this changes the ``ens1`` and ``ens2`` objects:</span>
 
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis import Universe</span>
-<span class="sd">        &gt;&gt;&gt; import MDAnalysis.analysis.encore as encore</span>
+<span class="sd">        &gt;&gt;&gt; import mdaencore as encore</span>
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis.tests.datafiles import PSF, DCD, DCD2</span>
 <span class="sd">        &gt;&gt;&gt; ens1 = Universe(PSF, DCD)</span>
 <span class="sd">        &gt;&gt;&gt; ens2 = Universe(PSF, DCD2)</span>
@@ -915,7 +975,7 @@
 <span class="sd">    manually:</span>
 
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis import Universe</span>
-<span class="sd">        &gt;&gt;&gt; import MDAnalysis.analysis.encore as encore</span>
+<span class="sd">        &gt;&gt;&gt; import mdaencore as encore</span>
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis.tests.datafiles import PSF, DCD, DCD2</span>
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis.analysis import align</span>
 <span class="sd">        &gt;&gt;&gt; ens1 = Universe(PSF, DCD)</span>
@@ -1081,7 +1141,7 @@
 
 <span class="sd">    clustering_method :</span>
 <span class="sd">        A single or a list of instances of the</span>
-<span class="sd">        :class:`MDAnalysis.analysis.encore.clustering.ClusteringMethod` classes</span>
+<span class="sd">        :class:`mdaencore.clustering.ClusteringMethod` classes</span>
 <span class="sd">        from the clustering module. Different parameters for the same clustering</span>
 <span class="sd">        method can be explored by adding different instances of the same</span>
 <span class="sd">        clustering class. Clustering methods options are the</span>
@@ -1162,7 +1222,7 @@
 <span class="sd">    Here the simplest case of just two instances of :class:`Universe` is illustrated:</span>
 
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis import Universe</span>
-<span class="sd">        &gt;&gt;&gt; import MDAnalysis.analysis.encore as encore</span>
+<span class="sd">        &gt;&gt;&gt; import mdaencore as encore</span>
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis.tests.datafiles import PSF, DCD, DCD2</span>
 <span class="sd">        &gt;&gt;&gt; ens1 = Universe(PSF, DCD)</span>
 <span class="sd">        &gt;&gt;&gt; ens2 = Universe(PSF, DCD2)</span>
@@ -1438,7 +1498,7 @@
 <span class="sd">    illustrated:</span>
 
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis import Universe</span>
-<span class="sd">        &gt;&gt;&gt; import MDAnalysis.analysis.encore as encore</span>
+<span class="sd">        &gt;&gt;&gt; import mdaencore as encore</span>
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis.tests.datafiles import PSF, DCD, DCD2</span>
 <span class="sd">        &gt;&gt;&gt; ens1 = Universe(PSF,DCD)</span>
 <span class="sd">        &gt;&gt;&gt; ens2 = Universe(PSF,DCD2)</span>
@@ -1614,7 +1674,7 @@
 <span class="sd">    select : str, optional</span>
 <span class="sd">        Atom selection string in the MDAnalysis format. Default is &quot;name CA&quot;</span>
 
-<span class="sd">    clustering_method : MDAnalysis.analysis.encore.clustering.ClusteringMethod</span>
+<span class="sd">    clustering_method : mdaencore.clustering.ClusteringMethod</span>
 <span class="sd">        A single or a list of instances of the ClusteringMethod classes from</span>
 <span class="sd">        the clustering module. Different parameters for the same clustering</span>
 <span class="sd">        method can be explored by adding different instances of the same</span>
@@ -1641,7 +1701,7 @@
 <span class="sd">    splitting the trajectory into a window_size of 10 frames:</span>
 
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis import Universe</span>
-<span class="sd">        &gt;&gt;&gt; import MDAnalysis.analysis.encore as encore</span>
+<span class="sd">        &gt;&gt;&gt; import mdaencore as encore</span>
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis.tests.datafiles import PSF, DCD, DCD2</span>
 <span class="sd">        &gt;&gt;&gt; ens1 = Universe(PSF,DCD)</span>
 <span class="sd">        &gt;&gt;&gt; ces_conv = encore.ces_convergence(ens1, 10)</span>
@@ -1749,7 +1809,7 @@
 <span class="sd">    splitting the trajectory into a window_size of 10 frames:</span>
 
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis import Universe</span>
-<span class="sd">        &gt;&gt;&gt; import MDAnalysis.analysis.encore as encore</span>
+<span class="sd">        &gt;&gt;&gt; import mdaencore as encore</span>
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis.tests.datafiles import PSF, DCD, DCD2</span>
 <span class="sd">        &gt;&gt;&gt; ens1 = Universe(PSF,DCD)</span>
 <span class="sd">        &gt;&gt;&gt; dres_conv = encore.dres_convergence(ens1, 10)</span>
@@ -1798,16 +1858,19 @@
 </pre></div>
 
            </div>
+           
           </div>
           <footer>
+  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, MDAnalysis. Project structure based on the MDAnalysis Cookiecutter version 0.1.</p>
-  </div>
+    <p>
+        &copy; Copyright 2023, MDAnalysis. Project structure based on the MDAnalysis Cookiecutter version 0.1
 
-  
+    </p>
+  </div>
 
 <div class="footer"><p>Please see
     our <a href="https://www.mdanalysis.org/pages/privacy/">Privacy Policy</a>
@@ -1819,9 +1882,12 @@
 
 
 </footer>
+
         </div>
       </div>
+
     </section>
+
   </div>
   <script>
     var versions_json_url = ''
@@ -1841,11 +1907,18 @@
         </dl>
 
     </div>
-</div><script>
+</div>
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

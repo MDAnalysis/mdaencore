@@ -10,38 +10,60 @@
   <link rel="shortcut icon" href="_static/logo/mda_favicon.ico">
 </head>
 
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mdaencore.similarity &mdash; mdaencore  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/site.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+  <title>mdaencore.similarity &mdash; mdaencore  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script src="../_static/js/versions.js"></script>
-    <script src="../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/site.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/site.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="mdaencore.utils" href="mdaencore.utils.html" />
     <link rel="prev" title="mdaencore.dimensionality_reduction.stochasticproxembed" href="mdaencore.dimensionality_reduction.stochasticproxembed.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
 
 
 
@@ -63,14 +85,22 @@
 
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
@@ -81,10 +111,10 @@
 <li class="toctree-l3"><a class="reference internal" href="mdaencore.confdistmatrix.html">mdaencore.confdistmatrix</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mdaencore.covariance.html">mdaencore.covariance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mdaencore.cutils.html">mdaencore.cutils</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mdaencore.data.html">mdaencore.data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mdaencore.dimensionality_reduction.html">mdaencore.dimensionality_reduction</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">mdaencore.similarity</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#ensemble-similarity-calculations-mdaencore-similarity">Ensemble Similarity Calculations — <code class="xref py py-mod docutils literal notranslate"><span class="pre">mdaencore.similarity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functions-for-ensemble-comparisons">Functions for ensemble comparisons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-reference">Function reference</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mdaencore.utils.html">mdaencore.utils</a></li>
@@ -94,41 +124,74 @@
 </li>
 </ul>
 
+            
+          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">mdaencore</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../api.html">API Documentation</a></li>
-          <li class="breadcrumb-item"><a href="mdaencore.html">mdaencore</a></li>
-      <li class="breadcrumb-item active">mdaencore.similarity</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">API Documentation</a> &raquo;</li>
+        
+          <li><a href="mdaencore.html">mdaencore</a> &raquo;</li>
+        
+      <li>mdaencore.similarity</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+            
             <a href="../_sources/autosummary/mdaencore.similarity.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="module-mdaencore.similarity">
-<span id="mdaencore-similarity"></span><h1>mdaencore.similarity<a class="headerlink" href="#module-mdaencore.similarity" title="Permalink to this heading"></a></h1>
-<section id="ensemble-similarity-calculations-mdaencore-similarity">
-<h2>Ensemble Similarity Calculations — <a class="reference internal" href="#module-mdaencore.similarity" title="mdaencore.similarity"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mdaencore.similarity</span></code></a><a class="headerlink" href="#ensemble-similarity-calculations-mdaencore-similarity" title="Permalink to this heading"></a></h2>
-<dl class="field-list simple">
-<dt class="field-odd">Author<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Matteo Tiberti, Wouter Boomsma, Tone Bengtsen</p>
-</dd>
-</dl>
+<span id="mdaencore-similarity"></span><h1>mdaencore.similarity<a class="headerlink" href="#module-mdaencore.similarity" title="Permalink to this heading">¶</a></h1>
 <p>The module contains implementations of similarity measures between protein
 ensembles described in <span id="id1">[<a class="reference internal" href="#id8" title="Kresten Lindorff-Larsen and Jesper Ferkinghoff-Borg. Similarity measures for protein ensembles. PLOS ONE, 4(1):1-13, 01 2009. doi:10.1371/journal.pone.0004203.">ᵇLLFB09</a>]</span>. The implementation and
 examples are described in <span id="id2">[<a class="reference internal" href="#id9" title="Matteo Tiberti, Elena Papaleo, Tone Bengtsen, Wouter Boomsma, and Kresten Lindorff-Larsen. Encore: software for quantitative ensemble comparison. PLOS Computational Biology, 11(10):1-16, 10 2015. doi:10.1371/journal.pcbi.1004415.">ᵇTPB+15</a>]</span>.</p>
@@ -158,7 +221,7 @@ test suite for two different simulations of the protein AdK.</p>
 <p>To calculate the Harmonic Ensemble Similarity (<code class="xref py py-func docutils literal notranslate"><span class="pre">hes()</span></code>)
 two ensemble objects are first created and then used for calculation:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">MDAnalysis.analysis.encore</span> <span class="k">as</span> <span class="nn">encore</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis.tests.datafiles</span> <span class="kn">import</span> <span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">,</span> <span class="n">DCD2</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ens1</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ens2</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span> <span class="n">DCD2</span><span class="p">)</span>
@@ -177,7 +240,7 @@ of. The similarity matrix is derived from a distance matrix (By default a RMSD
 matrix; a full RMSD matrix between each pairs of elements needs to be computed).
 The RMSD matrix is automatically calculated:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">MDAnalysis.analysis.encore</span> <span class="k">as</span> <span class="nn">encore</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis.tests.datafiles</span> <span class="kn">import</span> <span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">,</span> <span class="n">DCD2</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ens1</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ens2</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span> <span class="n">DCD2</span><span class="p">)</span>
@@ -197,7 +260,7 @@ the Principal Component Analysis.
 In the following example the dimensions are reduced to 3 using the
 RMSD matrix and the default SPE dimensional reduction method:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">MDAnalysis.analysis.encore</span> <span class="k">as</span> <span class="nn">encore</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis.tests.datafiles</span> <span class="kn">import</span> <span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">,</span> <span class="n">DCD2</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ens1</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ens2</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span> <span class="n">DCD2</span><span class="p">)</span>
@@ -233,7 +296,7 @@ ln(2), which indicates no similarity between the ensembles and a lower bound
 of 0.0 signifying two identical ensembles. In contrast, the <code class="xref py py-func docutils literal notranslate"><span class="pre">hes()</span></code> function uses
 a symmetrized version of the Kullback-Leibler divergence, which is unbounded.</p>
 <section id="functions-for-ensemble-comparisons">
-<h3>Functions for ensemble comparisons<a class="headerlink" href="#functions-for-ensemble-comparisons" title="Permalink to this heading"></a></h3>
+<h2>Functions for ensemble comparisons<a class="headerlink" href="#functions-for-ensemble-comparisons" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">mdaencore.similarity.</span></span><span class="sig-name descname"><span class="pre">hes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ensembles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">select</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'name</span> <span class="pre">CA'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cov_estimator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'shrinkage'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mass'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimate_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bootstrapping_samples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calc_diagonal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mdaencore/similarity.html#hes"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -296,7 +359,7 @@ You can use the <code class="docutils literal notranslate"><span class="pre">ali
 align everything to the current timestep in the first ensemble. Note that
 this changes the <code class="docutils literal notranslate"><span class="pre">ens1</span></code> and <code class="docutils literal notranslate"><span class="pre">ens2</span></code> objects:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">MDAnalysis.analysis.encore</span> <span class="k">as</span> <span class="nn">encore</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis.tests.datafiles</span> <span class="kn">import</span> <span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">,</span> <span class="n">DCD2</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ens1</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ens2</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span> <span class="n">DCD2</span><span class="p">)</span>
@@ -313,7 +376,7 @@ this changes the <code class="docutils literal notranslate"><span class="pre">en
 you can call use an <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/analysis/align.html#MDAnalysis.analysis.align.AlignTraj" title="(in MDAnalysis v2.6.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">AlignTraj</span></code></a> object
 manually:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">MDAnalysis.analysis.encore</span> <span class="k">as</span> <span class="nn">encore</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis.tests.datafiles</span> <span class="kn">import</span> <span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">,</span> <span class="n">DCD2</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis.analysis</span> <span class="kn">import</span> <span class="n">align</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ens1</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">)</span>
@@ -343,7 +406,7 @@ using the Jensen-Shannon divergence as described in
 <li><p><strong>ensembles</strong> (<em>list</em>) – List of ensemble objects for similarity measurements</p></li>
 <li><p><strong>select</strong> (<em>str, optional</em>) – Atom selection string in the MDAnalysis format. Default is “name CA”</p></li>
 <li><p><strong>clustering_method</strong> – A single or a list of instances of the
-<code class="xref py py-class docutils literal notranslate"><span class="pre">MDAnalysis.analysis.encore.clustering.ClusteringMethod</span></code> classes
+<a class="reference internal" href="mdaencore.clustering.ClusteringMethod.html#module-mdaencore.clustering.ClusteringMethod" title="mdaencore.clustering.ClusteringMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">mdaencore.clustering.ClusteringMethod</span></code></a> classes
 from the clustering module. Different parameters for the same clustering
 method can be explored by adding different instances of the same
 clustering class. Clustering methods options are the
@@ -404,7 +467,7 @@ for the same clustering method can be explored by adding different
 instances of the same clustering class.
 Here the simplest case of just two instances of <code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code> is illustrated:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">MDAnalysis.analysis.encore</span> <span class="k">as</span> <span class="nn">encore</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis.tests.datafiles</span> <span class="kn">import</span> <span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">,</span> <span class="n">DCD2</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ens1</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ens2</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span> <span class="n">DCD2</span><span class="p">)</span>
@@ -507,7 +570,7 @@ instances of the same method  class.
 Here the simplest case of comparing just two instances of <code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code> is
 illustrated:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">MDAnalysis.analysis.encore</span> <span class="k">as</span> <span class="nn">encore</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis.tests.datafiles</span> <span class="kn">import</span> <span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">,</span> <span class="n">DCD2</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ens1</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span><span class="n">DCD</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ens2</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span><span class="n">DCD2</span><span class="p">)</span>
@@ -524,7 +587,7 @@ reduction can easily be visualized, see the <code class="docutils literal notran
 
 </section>
 <section id="function-reference">
-<h3>Function reference<a class="headerlink" href="#function-reference" title="Permalink to this heading"></a></h3>
+<h2>Function reference<a class="headerlink" href="#function-reference" title="Permalink to this heading">¶</a></h2>
 <p class="rubric">References</p>
 <div class="docutils container" id="id7">
 <div class="citation" id="id8" role="doc-biblioentry">
@@ -538,7 +601,6 @@ reduction can easily be visualized, see the <code class="docutils literal notran
 </div>
 </div>
 </div>
-</section>
 </section>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
@@ -594,19 +656,28 @@ reduction can easily be visualized, see the <code class="docutils literal notran
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="mdaencore.dimensionality_reduction.stochasticproxembed.html" class="btn btn-neutral float-left" title="mdaencore.dimensionality_reduction.stochasticproxembed" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="mdaencore.utils.html" class="btn btn-neutral float-right" title="mdaencore.utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mdaencore.utils.html" class="btn btn-neutral float-right" title="mdaencore.utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mdaencore.dimensionality_reduction.stochasticproxembed.html" class="btn btn-neutral float-left" title="mdaencore.dimensionality_reduction.stochasticproxembed" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, MDAnalysis. Project structure based on the MDAnalysis Cookiecutter version 0.1.</p>
-  </div>
+    <p>
+        &copy; Copyright 2023, MDAnalysis. Project structure based on the MDAnalysis Cookiecutter version 0.1
 
-  
+    </p>
+  </div>
 
 <div class="footer"><p>Please see
     our <a href="https://www.mdanalysis.org/pages/privacy/">Privacy Policy</a>
@@ -618,9 +689,12 @@ reduction can easily be visualized, see the <code class="docutils literal notran
 
 
 </footer>
+
         </div>
       </div>
+
     </section>
+
   </div>
   <script>
     var versions_json_url = ''
@@ -640,11 +714,18 @@ reduction can easily be visualized, see the <code class="docutils literal notran
         </dl>
 
     </div>
-</div><script>
+</div>
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

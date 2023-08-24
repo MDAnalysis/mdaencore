@@ -72,7 +72,6 @@ conda deactivate
 To build the package from source, run:
 
 ```
-pip install cython  # this must be done first
 pip install .
 ```
 

@@ -12,8 +12,7 @@ dependencies:
     - numpy
     - scipy
     - MDAnalysis
+    - cython
     - MDAnalysisTests
     - pytest
-
-    - pip:
-        - mdanalysis-sphinx-theme
+    - mdanalysis-sphinx-theme

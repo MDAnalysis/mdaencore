@@ -102,7 +102,7 @@ setup(
     # Self-descriptive entries which should always be present
     name='mdaencore',
     author='MDAnalysis',
-    author_email='ikenney@asu.edu',
+    author_email='mdanalysis@numfocus.org',
     description=short_description,
     long_description=long_description,
     long_description_content_type="text/markdown",

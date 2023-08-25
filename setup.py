@@ -27,9 +27,7 @@ except:
 
 
 def extensions(debug=False, use_cython=True):
-    # TODO: remove fast-math?
-    encore_compile_args = ['-std=c99', '-ffast-math', '-funroll-loops',
-                           '-fsigned-zeros']
+    encore_compile_args = ['-std=c99', '-funroll-loops', '-fsigned-zeros']
 
     cython_linetrace = bool(os.environ.get('CYTHON_TRACE_NOGIL', False))
 

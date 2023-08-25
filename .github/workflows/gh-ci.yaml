@@ -87,7 +87,7 @@ jobs:
     - name: Install package
       run: |
         python --version
-        python -m pip install .  --no-deps 
+        python -m pip install -e .  --no-deps 
 
     - name: Python information
       run: |

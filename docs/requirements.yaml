@@ -7,7 +7,8 @@ dependencies:
     - python
     - pip
 
-    - sphinxcontrib-bibtex=2.5.0
+    - sphinxcontrib-bibtex
+    - docutils >=0.20
 
     - numpy
     - scipy

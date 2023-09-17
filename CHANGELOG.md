@@ -19,12 +19,14 @@ The rules for this file:
 ## [Unreleased]
 
 ### Authors
+- ianmkenney
 <!-- GitHub usernames of contributors to this release -->
 
 ### Added
 <!-- New added features -->
 
 ### Fixed
+- Removed ffast-math compiler flag (PR #14)
 <!-- Bug fixes -->
 
 ### Changed

@@ -20,15 +20,8 @@
 # MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations.
 # J. Comput. Chem. 32 (2011), 2319--2327, doi:10.1002/jcc.21787
 #
-"""
-clustering frontend --- :mod:`mdaencore.clustering.cluster`
-============================================================================
-
-The module defines a function serving as front-end for various clustering
+"""The module defines a function serving as front-end for various clustering
 algorithms, wrapping them to allow them to be used interchangably.
-
-:Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
-
 """
 import numpy as np
 from ..utils import ParallelCalculation, merge_universes
@@ -105,7 +98,7 @@ def cluster(ensembles,
     Here, we cluster two ensembles ::
 
         >>> from MDAnalysis import Universe
-        >>> import MDAnalysis.analysis.encore as encore
+        >>> import mdaencore as encore
         >>> from MDAnalysis.tests.datafiles import PSF, DCD, DCD2
         >>> ens1 = Universe(PSF, DCD)
         >>> ens2 = Universe(PSF, DCD2)

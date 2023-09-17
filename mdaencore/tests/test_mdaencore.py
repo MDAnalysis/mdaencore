@@ -39,7 +39,7 @@ from MDAnalysisTests import block_import
 
 import MDAnalysis.analysis.rms as rms
 import MDAnalysis.analysis.align as align
-import MDAnalysis.analysis.encore.confdistmatrix as confdistmatrix
+import mdaencore.confdistmatrix as confdistmatrix
 
 
 def function(x):
@@ -907,8 +907,8 @@ class TestEncoreImportWarnings(object):
             if 'encore' in mod:
                 sys.modules.pop(mod, None)
         for pkg in (
-                'MDAnalysis.analysis.encore.dimensionality_reduction.DimensionalityReductionMethod',
-                'MDAnalysis.analysis.encore.clustering.ClusteringMethod',
+                'mdaencore.dimensionality_reduction.DimensionalityReductionMethod',
+                'mdaencore.clustering.ClusteringMethod',
         ):
             self._check_sklearn_import_warns(pkg, recwarn)
             # This is a quickfix! Convert this to a parametrize call in future.

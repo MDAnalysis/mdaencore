@@ -20,18 +20,11 @@
 # MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations.
 # J. Comput. Chem. 32 (2011), 2319--2327, doi:10.1002/jcc.21787
 #
-"""
-Distance Matrix calculation --- :mod:`mdaencore.confdistmatrix`
-==================================================================================
-
-
+"""\
 The module contains a base class to easily compute, using
 parallelization and shared memory, matrices of conformational
 distance between the structures stored as frames in a Universe. A
 class to compute an RMSD matrix in such a way is also available.
-
-:Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
-
 """
 from joblib import Parallel, delayed
 import numpy as np

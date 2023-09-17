@@ -26,9 +26,6 @@ Cluster representation --- :mod:`mdaencore.clustering.ClusterCollection`
 
 The module contains the Cluster and ClusterCollection classes which are
 designed to store results from clustering algorithms.
-
-:Author: Matteo Tiberti, Wouter Boomsma, Tone Bengtsen
-
 """
 import numpy as np
 

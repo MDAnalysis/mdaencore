@@ -12,10 +12,10 @@ name = "mdaencore"
 description = "Ensemble overlap comparison software for molecular data."
 license = {file = "LICENSE" }
 authors = [
-    {name = "MDAnalysis", email = "ikenney@asu.edu"},
+    {name = "MDAnalysis", email = "mdanalysis@numfocus.org"},
 ]
 maintainers = [
-    {name = "MDAnalysis", email = "ikenney@asu.edu"},
+    {name = "MDAnalysis", email = "mdanalysis@numfocus.org"},
 ]
 readme = "README.md"
 requires-python = ">=3.9"

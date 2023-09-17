@@ -2,74 +2,58 @@
 
 
   
+    
+  
+
+
 
 
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="shortcut icon" href="_static/logo/mda_favicon.ico">
+  <link rel="shortcut icon" href="../../_static/logo/mda_favicon.ico">
 </head>
 
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mdaencore.similarity &mdash; mdaencore  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/site.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/versions.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../_static/site.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/site.css" type="text/css" />
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
+        <div class="wy-side-nav-search"  style="background: white" >
+
 
 
 
   
+
 
 
 
 <a href="../../index.html">
   
-    <img src="_static/logo/mda_logo.png" class="logo" alt="Logo"/>
+    <img src="../../_static/logo/mda_logo.png" class="logo" alt="Logo"/>
 </a>
 
 
@@ -81,88 +65,44 @@
 
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
 
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">mdaencore</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../index.html">Module code</a> &raquo;</li>
-        
-      <li>mdaencore.similarity</li>
-    
-    
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">mdaencore.similarity</li>
       <li class="wy-breadcrumbs-aside">
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <h1>Source code for mdaencore.similarity</h1><div class="highlight"><pre>
 <span></span><span class="c1"># -*- Mode: python; tab-width: 4; indent-tabs-mode:nil; coding:utf-8 -*-</span>
 <span class="c1"># vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4</span>
@@ -188,8 +128,12 @@
 <span class="c1">#</span>
 <span class="sd">&quot;&quot;&quot;\</span>
 <span class="sd">The module contains implementations of similarity measures between protein</span>
-<span class="sd">ensembles described in :cite:p:`b-LindorffLarsen2009`. The implementation and</span>
-<span class="sd">examples are described in :cite:p:`b-Tiberti2015`.</span>
+<span class="sd">ensembles.</span>
+
+<span class="sd">The similarity measure algorithms here are as described</span>
+<span class="sd">in :footcite:p:`LindorffLarsen2009`.</span>
+<span class="sd">The implementation and examples are also further</span>
+<span class="sd">described in :footcite:p:`Tiberti2015`.</span>
 
 <span class="sd">The module includes facilities for handling ensembles and trajectories through</span>
 <span class="sd">the :class:`Universe` class, performing clustering or dimensionality reduction</span>
@@ -210,7 +154,7 @@
 <span class="sd">+ **Clustering based convergence evaluation** : :func:`ces_convergence`</span>
 <span class="sd">+ **Dimensionality-reduction based convergence evaluation** : :func:`dres_convergence`</span>
 
-<span class="sd">When using this module in published work please cite :cite:p:`b-Tiberti2015`.</span>
+<span class="sd">When using this module in published work please cite :footcite:p:`Tiberti2015`.</span>
 
 <span class="sd">.. _Examples:</span>
 <span class="sd">Examples</span>
@@ -320,13 +264,8 @@
 
 <span class="sd">.. rubric:: References</span>
 
-<span class="sd">.. bibliography::</span>
-<span class="sd">    :filter: False</span>
-<span class="sd">    :keyprefix: b-</span>
-<span class="sd">    :labelprefix: ᵇ</span>
+<span class="sd">.. footbibliography::</span>
 
-<span class="sd">    Tiberti2015</span>
-<span class="sd">    LindorffLarsen2009</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="kn">import</span> <span class="nn">logging</span>
@@ -412,7 +351,7 @@
                                  <span class="n">x2</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calculate the harmonic ensemble similarity measure</span>
-<span class="sd">    as defined in :cite:p:`b-Tiberti2015`.</span>
+<span class="sd">    as defined in :footcite:p:`Tiberti2015`.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -885,7 +824,7 @@
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculates the Harmonic Ensemble Similarity (HES) between ensembles.</span>
 
 <span class="sd">    The HES is calculated with the symmetrized version of Kullback-Leibler</span>
-<span class="sd">    divergence as described in :cite:p:`b-Tiberti2015`.</span>
+<span class="sd">    divergence as described in :footcite:p:`Tiberti2015`.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -1128,7 +1067,7 @@
 
 <span class="sd">    Calculates the Clustering Ensemble Similarity (CES) between ensembles</span>
 <span class="sd">    using the Jensen-Shannon divergence as described in</span>
-<span class="sd">    :cite:p:`b-Tiberti2015`.</span>
+<span class="sd">    :footcite:p:`Tiberti2015`.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -1396,7 +1335,7 @@
 
 <span class="sd">    Calculates the Dimensional Reduction Ensemble Similarity (DRES) between</span>
 <span class="sd">    ensembles using the Jensen-Shannon divergence as described in</span>
-<span class="sd">    :cite:p:`b-Tiberti2015`.</span>
+<span class="sd">    :footcite:p:`Tiberti2015`.</span>
 
 
 <span class="sd">    Parameters</span>
@@ -1858,19 +1797,16 @@
 </pre></div>
 
            </div>
-           
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2023, MDAnalysis. Project structure based on the MDAnalysis Cookiecutter version 0.1
-
-    </p>
+    <p>&#169; Copyright 2023, MDAnalysis. Project structure based on the MDAnalysis Cookiecutter version 0.1.</p>
   </div>
+
+  
 
 <div class="footer"><p>Please see
     our <a href="https://www.mdanalysis.org/pages/privacy/">Privacy Policy</a>
@@ -1882,12 +1818,9 @@
 
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
   <script>
     var versions_json_url = ''
@@ -1907,18 +1840,11 @@
         </dl>
 
     </div>
-</div>
-
-  <script type="text/javascript">
+</div><script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

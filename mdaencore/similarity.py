@@ -22,8 +22,12 @@
 #
 """\
 The module contains implementations of similarity measures between protein
-ensembles described in :cite:p:`b-LindorffLarsen2009`. The implementation and
-examples are described in :cite:p:`b-Tiberti2015`.
+ensembles.
+
+The similarity measure algorithms here are as described
+in :footcite:p:`LindorffLarsen2009`.
+The implementation and examples are also further
+described in :footcite:p:`Tiberti2015`.
 
 The module includes facilities for handling ensembles and trajectories through
 the :class:`Universe` class, performing clustering or dimensionality reduction
@@ -44,7 +48,7 @@ as well as two methods to evaluate the convergence of trajectories:
 + **Clustering based convergence evaluation** : :func:`ces_convergence`
 + **Dimensionality-reduction based convergence evaluation** : :func:`dres_convergence`
 
-When using this module in published work please cite :cite:p:`b-Tiberti2015`.
+When using this module in published work please cite :footcite:p:`Tiberti2015`.
 
 .. _Examples:
 Examples
@@ -154,13 +158,8 @@ Function reference
 
 .. rubric:: References
 
-.. bibliography::
-    :filter: False
-    :keyprefix: b-
-    :labelprefix: ᵇ
+.. footbibliography::
 
-    Tiberti2015
-    LindorffLarsen2009
 """
 import warnings
 import logging
@@ -246,7 +245,7 @@ def harmonic_ensemble_similarity(sigma1,
                                  x2):
     """
     Calculate the harmonic ensemble similarity measure
-    as defined in :cite:p:`b-Tiberti2015`.
+    as defined in :footcite:p:`Tiberti2015`.
 
     Parameters
     ----------
@@ -719,7 +718,7 @@ def hes(ensembles,
     r"""Calculates the Harmonic Ensemble Similarity (HES) between ensembles.
 
     The HES is calculated with the symmetrized version of Kullback-Leibler
-    divergence as described in :cite:p:`b-Tiberti2015`.
+    divergence as described in :footcite:p:`Tiberti2015`.
 
     Parameters
     ----------
@@ -962,7 +961,7 @@ def ces(ensembles,
 
     Calculates the Clustering Ensemble Similarity (CES) between ensembles
     using the Jensen-Shannon divergence as described in
-    :cite:p:`b-Tiberti2015`.
+    :footcite:p:`Tiberti2015`.
 
     Parameters
     ----------
@@ -1230,7 +1229,7 @@ def dres(ensembles,
 
     Calculates the Dimensional Reduction Ensemble Similarity (DRES) between
     ensembles using the Jensen-Shannon divergence as described in
-    :cite:p:`b-Tiberti2015`.
+    :footcite:p:`Tiberti2015`.
 
 
     Parameters

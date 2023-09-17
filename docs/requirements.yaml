@@ -8,6 +8,7 @@ dependencies:
     - pip
 
     - sphinxcontrib-bibtex=2.5.0
+    - mdanalysis-sphinx-theme    
 
     - numpy
     - scipy
@@ -15,4 +16,4 @@ dependencies:
     - cython
     - MDAnalysisTests
     - pytest
-    - mdanalysis-sphinx-theme
+    

@@ -22,8 +22,12 @@
 #
 """\
 The module contains implementations of similarity measures between protein
-ensembles described in :footcite:p:`LindorffLarsen2009`. The implementation and
-examples are described in :footcite:p:`Tiberti2015`.
+ensembles.
+
+The similarity measure algorithms here are as described
+in :footcite:p:`LindorffLarsen2009`.
+The implementation and examples are also further
+described in :footcite:p:`Tiberti2015`.
 
 The module includes facilities for handling ensembles and trajectories through
 the :class:`Universe` class, performing clustering or dimensionality reduction

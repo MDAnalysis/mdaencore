@@ -19,15 +19,15 @@ The rules for this file:
 ## [Unreleased]
 
 ### Authors
-- ianmkenney
-<!-- GitHub usernames of contributors to this release -->
+- IAlibay
+- lilyminium
+- orbeckst
 
 ### Added
-<!-- New added features -->
+- wheel deployment workflow (#22)
 
 ### Fixed
-- Removed ffast-math compiler flag (PR #14)
-<!-- Bug fixes -->
+- documentation fixes (#13, #18)
 
 ### Changed
 <!-- Changes in existing functionality -->
@@ -37,3 +37,26 @@ The rules for this file:
 
 ### Removed
 <!-- Removed features -->
+
+## [0.1.0] - 2023-08-25
+
+mdaencore was created by Ian Kenney in 2023 based on the source provided in
+MDAnalysis.analysis.encore sub-package. The original source was written by
+Matteo Tiberti, Wouter Boomsma, and Tone Bengtsen in 2016. Additional
+contributions to that sub-package are listed in the AUTHORS.md contained in 
+this (mdaencore) repository.
+
+### Authors
+- ianmkenney
+
+### Added
+- the core functionality of mdaencore (and its tests) was implemented
+  using the source code from MDAnalysis.analysis.encore
+- documentation deployed to github pages and read the docs (#1)
+
+### Fixed
+- removed ffast-math compiler flag (PR #14)
+
+
+[Unreleased]: https://github.com/MDAnalysis/mdaencore/compare/0.1.0...HEAD
+[0.1.0]: https://github.com/MDAnalysis/mdaencore/releases/tag/0.1.0

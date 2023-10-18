@@ -40,11 +40,13 @@ The rules for this file:
 
 ## [0.1.0] - 2023-08-25
 
-mdaencore was created by Ian Kenney in 2023 based on the source provided in
-MDAnalysis.analysis.encore sub-package. The original source was written by
-Matteo Tiberti, Wouter Boomsma, and Tone Bengtsen in 2016. Additional
-contributions to that sub-package are listed in the AUTHORS.md contained in 
-this (mdaencore) repository.
+The original `MDAnalysis.analysis.encore` was written by Matteo Tiberti,
+Wouter Boomsma, and Tone Bengtsen in 2016 and had been part of MDAnalysis
+since release 0.16.0,
+https://docs.mdanalysis.org/2.6.1/documentation_pages/analysis/encore.html.
+Ian Kenney created the `mdaencore` MDAKit in 2023, based on the original code
+in MDAnalysis. Additional contributors to the original source code are listed
+in the AUTHORS.md file.
 
 ### Authors
 - ianmkenney

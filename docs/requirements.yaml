@@ -7,6 +7,7 @@ dependencies:
     - python
     - pip
 
+    - docutils >=0.20
     - sphinxcontrib-bibtex=2.5.0
     - mdanalysis-sphinx-theme    
 

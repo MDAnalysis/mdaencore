@@ -27,6 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       stable-python-version: ${{ steps.get-compatible-python.outputs.stable-python }}
+      latest-python-version: ${{ steps.get-compatible-python.outputs.latest-python }}
       python-matrix: ${{ steps.get-compatible-python.outputs.python-versions }}
     steps:
       - uses: actions/setup-python@v4
@@ -35,6 +36,8 @@ jobs:
 
       - id: get-compatible-python
         uses: MDAnalysis/mdanalysis-compatible-python@main
+        with:
+          release: "latest"
 
   main-tests:
     if: "github.repository == 'MDAnalysis/mdaencore'"

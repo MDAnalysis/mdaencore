@@ -2,7 +2,7 @@ mdaencore
 ==============================
 [//]: # (Badges)
 
-| **Latest release** | [![Last release tag][lastreleasetag]][githubreleases] ![GitHub commits since latest release (by date) for a branch][commitssincerelease]  [![Documentation Status][badge_docs]][docsurl]|
+| **Latest release** | [![Last release tag][lastreleasetag]][githubreleases] ![GitHub commits since latest release (by date) for a branch][commitssincerelease]  [![Documentation Status][badge_docs]][docsurl] [![Anaconda-Server Badge][badge_condaforge]][conda_url]|
 | :------            | :-------                                                                                                                                                                              |
 | **Status**         | [![GH Actions Status][badge_actions]][mainworkflow] [![codecov][badge_codecov]][codecovio]                                                                                            |
 | **Community**      | [![License: GPL v2][badge_license]][licenseinfo]    [![Powered by MDAnalysis][mdanalysis_badge]][mdaorg]                                                                              |
@@ -11,6 +11,9 @@ mdaencore
 [badge_codecov]: https://codecov.io/gh/MDAnalysis/mdaencore/branch/main/graph/badge.svg
 [badge_license]: https://img.shields.io/badge/License-GPLv2-blue.svg
 [badge_docs]: https://github.com/MDAnalysis/mdaencore/actions/workflows/docs.yaml/badge.svg?branch=main
+[badge_condaforge]: https://anaconda.org/conda-forge/mdaencore/badges/version.svg
+[conda_url]: https://anaconda.org/conda-forge/mdaencore
+
 [codecovio]: https://codecov.io/gh/MDAnalysis/mdaencore/branch/main
 [commitssincerelease]: https://img.shields.io/github/commits-since/MDAnalysis/mdaencore/latest
 [githubreleases]: https://github.com/MDAnalysis/mdaencore/releases
@@ -34,38 +37,16 @@ Below we provide instructions both for `conda` and for `pip`.
 #### With conda
 
 Ensure that you have [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) installed.
-
-Create a virtual environment and activate it:
-
+Install in your preferred conda environment with
 ```
-conda create --name mdaencore
-conda activate mdaencore
+conda install -c conda-forge mdaencore
 ```
 
-Install the development and documentation dependencies:
-
+To update
 ```
-conda env update --name mdaencore --file devtools/conda-envs/test_env.yaml
-conda env update --name mdaencore --file docs/requirements.yaml
+conda update -c conda-forge mdaencore
 ```
 
-Build this package from source:
-
-```
-pip install .
-```
-
-If you want to update your dependencies (which can be risky!), run:
-
-```
-conda update --all
-```
-
-And when you are finished, you can exit the virtual environment with:
-
-```
-conda deactivate
-```
 
 #### With pip
 
@@ -92,4 +73,9 @@ Copyright (c) 2023, MDAnalysis
 #### Acknowledgements
  
 Project based on the  [MDAnalysis Cookiecutter](https://github.com/MDAnalysis/cookiecutter-mda) version 0.1.
-Please cite [MDAnalysis](https://github.com/MDAnalysis/mdanalysis#citation) when using mdaencore in published work.
+Please cite [MDAnalysis](https://github.com/MDAnalysis/mdanalysis#citation) and the [ENCORE paper](https://doi.org/10.1371/journal.pcbi.1004415) when using mdaencore in published work:
+
+1. M. Tiberti, E. Papaleo, T. Bengtsen, W. Boomsma, and K. Lindorff-Larsen. ENCORE: Software for quantitative ensemble comparison. PLoS Comput Biol, 11 (2015), e1004415. doi: 10.1371/journal.pcbi.1004415
+2. R. J. Gowers, M. Linke, J. Barnoud, T. J. E. Reddy, M. N. Melo, S. L. Seyler, D. L. Dotson, J. Domanski, S. Buchoux, I. M. Kenney, and O. Beckstein. MDAnalysis: A Python package for the rapid analysis of molecular dynamics simulations. In S. Benthall and S. Rostrup, editors, Proceedings of the 15th Python in Science Conference, pages 98-105, Austin, TX, 2016. SciPy. doi:10.25080/Majora-629e541a-00e
+
+

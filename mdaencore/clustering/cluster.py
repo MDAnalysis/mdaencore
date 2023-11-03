@@ -20,7 +20,11 @@
 # MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations.
 # J. Comput. Chem. 32 (2011), 2319--2327, doi:10.1002/jcc.21787
 #
-"""The module defines a function serving as front-end for various clustering
+"""\
+clustering frontend --- :mod:`mdaencore.clustering.cluster`
+============================================================================
+
+The module defines a function serving as front-end for various clustering
 algorithms, wrapping them to allow them to be used interchangably.
 """
 import numpy as np

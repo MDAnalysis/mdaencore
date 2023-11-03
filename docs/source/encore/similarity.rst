@@ -1,0 +1,2 @@
+.. automodule:: mdaencore.similarity
+   :members:

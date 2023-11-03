@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 mdaencore
 Ensemble overlap comparison software for molecular data.
@@ -99,8 +100,8 @@ exts, cythonfiles = extensions()
 setup(
     # Self-descriptive entries which should always be present
     name='mdaencore',
-    author='MDAnalysis',
-    author_email='mdanalysis@numfocus.org',
+    author='Kristoffer Enøe Johansson and AUTHORS',
+    author_email='kristoffer.johansson@bio.ku.dk',
     description=short_description,
     long_description=long_description,
     long_description_content_type="text/markdown",

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 [build-system]
 requires = [
   "setuptools >= 40.9.0",
@@ -12,10 +14,15 @@ name = "mdaencore"
 description = "Ensemble overlap comparison software for molecular data."
 license = {file = "LICENSE" }
 authors = [
-    {name = "MDAnalysis", email = "mdanalysis@numfocus.org"},
+    {name = "Matteo Tiberti", email = "tiberti@cancer.dk"},
+    {name = "Wouter Boomsma", email = "wb@di.ku.dk"},    
+    {name = "Tone Bengtsen", email = "tonebengsten@gmail.com"},
+    {name = "Ian M. Kenney", email = "ikenney@asu.edu"},
+    {name = "mdaencore AUTHORS"},
 ]
 maintainers = [
-    {name = "MDAnalysis", email = "mdanalysis@numfocus.org"},
+    {name = "Kristoffer Enøe Johansson", email = "kristoffer.johansson@bio.ku.dk"},
+    {name = "Kresten Lindorff-Larsen", email = "lindorff@bio.ku.dk"},
 ]
 readme = "README.md"
 requires-python = ">=3.9"
@@ -40,9 +47,9 @@ doc = [
     "mdanalysis_sphinx_theme",
 ]
 
-# [project.urls]
-# source = "https://github.com/MDAnalysis/mdaencore"
-# documentation = "https://mdaencore.readthedocs.io"
+[project.urls]
+source = "https://github.com/MDAnalysis/mdaencore"
+documentation = "https://www.mdanalysis.org/mdaencore/"
 
 [tool.pytest.ini_options]
 minversion = "6.0"

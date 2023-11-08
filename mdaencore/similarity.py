@@ -30,11 +30,11 @@ The implementation and examples are also further
 described in :footcite:p:`Tiberti2015`.
 
 The module includes facilities for handling ensembles and trajectories through
-the :class:`~MDAnalysis.core.universe.Universe` class, performing clustering or dimensionality reduction
-of the ensemble space, estimating multivariate probability distributions from
-the input data, and more. ENCORE can be used to compare experimental and
-simulation-derived ensembles, as well as estimate the convergence of
-trajectories from time-dependent simulations.
+the :class:`~MDAnalysis.core.universe.Universe` class, performing clustering
+or dimensionality reduction of the ensemble space, estimating multivariate
+probability distributions from the input data, and more. ENCORE can be used to
+compare experimental and simulation-derived ensembles, as well as estimate the
+convergence of trajectories from time-dependent simulations.
 
 ENCORE includes three different methods for calculations of similarity measures
 between ensembles implemented in individual functions:
@@ -1045,13 +1045,13 @@ def ces(ensembles,
     --------
     To calculate the Clustering Ensemble similarity, two ensembles are
     created as Universe object using a topology file and two trajectories. The
-    topology- and trajectory files used are obtained from the MDAnalysis
-    test suite for two different simulations of the protein AdK.
-    To use a different clustering method, set the parameter clustering_method
-    (Note that the sklearn module must be installed). Likewise, different parameters
-    for the same clustering method can be explored by adding different
-    instances of the same clustering class.
-    Here the simplest case of just two instances of :class:`~MDAnalysis.core.universe.Universe` is illustrated:
+    topology- and trajectory files used are obtained from the MDAnalysis test
+    suite for two different simulations of the protein AdK. To use a different
+    clustering method, set the parameter clustering_method (Note that the
+    sklearn module must be installed). Likewise, different parameters for the
+    same clustering method can be explored by adding different instances of
+    the same clustering class. Here the simplest case of just two instances
+    of :class:`~MDAnalysis.core.universe.Universe` is illustrated:
 
         >>> from MDAnalysis import Universe
         >>> import mdaencore as encore
@@ -1325,8 +1325,8 @@ def dres(ensembles,
     To use a different dimensional reduction methods, simply set the
     parameter dimensionality_reduction_method. Likewise, different parameters
     for the same clustering method can be explored by adding different
-    instances of the same method  class.
-    Here the simplest case of comparing just two instances of :class:`~MDAnalysis.core.universe.Universe` is
+    instances of the same method  class. Here the simplest case of comparing
+    just two instances of :class:`~MDAnalysis.core.universe.Universe` is
     illustrated:
 
         >>> from MDAnalysis import Universe

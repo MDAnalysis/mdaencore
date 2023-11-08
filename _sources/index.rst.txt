@@ -19,7 +19,7 @@ ensembles described in :footcite:p:`LindorffLarsen2009`. The implementation and 
 are described in :footcite:p:`Tiberti2015`.
 
 The module includes facilities for handling ensembles and trajectories through
-the :class:`Universe` class, performing clustering or dimensionality reduction
+the :class:`~MDAnalysis.core.universe.Universe` class, performing clustering or dimensionality reduction
 of the ensemble space, estimating multivariate probability distributions from
 the input data, and more. ENCORE can be used to compare experimental and
 simulation-derived ensembles, as well as estimate the convergence of

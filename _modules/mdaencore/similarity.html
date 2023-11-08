@@ -138,11 +138,11 @@
 <span class="sd">described in :footcite:p:`Tiberti2015`.</span>
 
 <span class="sd">The module includes facilities for handling ensembles and trajectories through</span>
-<span class="sd">the :class:`Universe` class, performing clustering or dimensionality reduction</span>
-<span class="sd">of the ensemble space, estimating multivariate probability distributions from</span>
-<span class="sd">the input data, and more. ENCORE can be used to compare experimental and</span>
-<span class="sd">simulation-derived ensembles, as well as estimate the convergence of</span>
-<span class="sd">trajectories from time-dependent simulations.</span>
+<span class="sd">the :class:`~MDAnalysis.core.universe.Universe` class, performing clustering</span>
+<span class="sd">or dimensionality reduction of the ensemble space, estimating multivariate</span>
+<span class="sd">probability distributions from the input data, and more. ENCORE can be used to</span>
+<span class="sd">compare experimental and simulation-derived ensembles, as well as estimate the</span>
+<span class="sd">convergence of trajectories from time-dependent simulations.</span>
 
 <span class="sd">ENCORE includes three different methods for calculations of similarity measures</span>
 <span class="sd">between ensembles implemented in individual functions:</span>
@@ -1188,13 +1188,13 @@
 <span class="sd">    --------</span>
 <span class="sd">    To calculate the Clustering Ensemble similarity, two ensembles are</span>
 <span class="sd">    created as Universe object using a topology file and two trajectories. The</span>
-<span class="sd">    topology- and trajectory files used are obtained from the MDAnalysis</span>
-<span class="sd">    test suite for two different simulations of the protein AdK.</span>
-<span class="sd">    To use a different clustering method, set the parameter clustering_method</span>
-<span class="sd">    (Note that the sklearn module must be installed). Likewise, different parameters</span>
-<span class="sd">    for the same clustering method can be explored by adding different</span>
-<span class="sd">    instances of the same clustering class.</span>
-<span class="sd">    Here the simplest case of just two instances of :class:`Universe` is illustrated:</span>
+<span class="sd">    topology- and trajectory files used are obtained from the MDAnalysis test</span>
+<span class="sd">    suite for two different simulations of the protein AdK. To use a different</span>
+<span class="sd">    clustering method, set the parameter clustering_method (Note that the</span>
+<span class="sd">    sklearn module must be installed). Likewise, different parameters for the</span>
+<span class="sd">    same clustering method can be explored by adding different instances of</span>
+<span class="sd">    the same clustering class. Here the simplest case of just two instances</span>
+<span class="sd">    of :class:`~MDAnalysis.core.universe.Universe` is illustrated:</span>
 
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis import Universe</span>
 <span class="sd">        &gt;&gt;&gt; import mdaencore as encore</span>
@@ -1471,8 +1471,8 @@
 <span class="sd">    To use a different dimensional reduction methods, simply set the</span>
 <span class="sd">    parameter dimensionality_reduction_method. Likewise, different parameters</span>
 <span class="sd">    for the same clustering method can be explored by adding different</span>
-<span class="sd">    instances of the same method  class.</span>
-<span class="sd">    Here the simplest case of comparing just two instances of :class:`Universe` is</span>
+<span class="sd">    instances of the same method  class. Here the simplest case of comparing</span>
+<span class="sd">    just two instances of :class:`~MDAnalysis.core.universe.Universe` is</span>
 <span class="sd">    illustrated:</span>
 
 <span class="sd">        &gt;&gt;&gt; from MDAnalysis import Universe</span>
@@ -1487,7 +1487,7 @@
 
 <span class="sd">    In addition to the quantitative similarity estimate, the dimensional</span>
 <span class="sd">    reduction can easily be visualized, see the ``Example`` section in</span>
-<span class="sd">    :mod:`mdaencore.dimensionality_reduction.reduce_dimensionality``</span>
+<span class="sd">    :mod:`mdaencore.dimensionality_reduction.reduce_dimensionality`</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 

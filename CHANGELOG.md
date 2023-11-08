@@ -28,7 +28,7 @@ The rules for this file:
 - wheel deployment workflow (#22)
 
 ### Fixed
-- documentation fixes (#13, #18, #49)
+- documentation fixes (#13, #18, #49, #51)
 
 ### Changed
 <!-- Changes in existing functionality -->

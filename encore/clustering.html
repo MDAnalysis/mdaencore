@@ -1,0 +1,458 @@
+
+
+
+  
+    
+  
+
+
+
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="../_static/logo/mda_favicon.ico">
+</head>
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clustering &mdash; mdaencore  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/site.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/js/versions.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dimensionality reduction" href="dimensionality_reduction.html" />
+    <link rel="prev" title="Ensemble Similarity Calculations — mdaencore.similarity" href="similarity.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+
+  
+
+
+
+
+<a href="../index.html">
+  
+    <img src="../_static/logo/mda_logo.png" class="logo" alt="Logo"/>
+</a>
+
+
+  
+  
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        </div>
+<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+        <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="similarity.html">Ensemble Similarity Calculations — <code class="xref py py-mod docutils literal notranslate"><span class="pre">mdaencore.similarity</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Clustering</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#clustering-frontend-mdaencore-clustering-cluster">clustering frontend — <code class="xref py py-mod docutils literal notranslate"><span class="pre">mdaencore.clustering.cluster</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mdaencore.clustering.cluster.cluster"><code class="docutils literal notranslate"><span class="pre">cluster()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cluster-representation-mdaencore-clustering-clustercollection">Cluster representation — <code class="xref py py-mod docutils literal notranslate"><span class="pre">mdaencore.clustering.ClusterCollection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mdaencore.clustering.ClusterCollection.Cluster"><code class="docutils literal notranslate"><span class="pre">Cluster</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mdaencore.clustering.ClusterCollection.ClusterCollection"><code class="docutils literal notranslate"><span class="pre">ClusterCollection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clustering-frontend-mdaencore-clustering-clusteringmethod">clustering frontend — <code class="xref py py-mod docutils literal notranslate"><span class="pre">mdaencore.clustering.ClusteringMethod</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mdaencore.clustering.ClusteringMethod.AffinityPropagation"><code class="docutils literal notranslate"><span class="pre">AffinityPropagation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mdaencore.clustering.ClusteringMethod.AffinityPropagationNative"><code class="docutils literal notranslate"><span class="pre">AffinityPropagationNative</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mdaencore.clustering.ClusteringMethod.ClusteringMethod"><code class="docutils literal notranslate"><span class="pre">ClusteringMethod</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mdaencore.clustering.ClusteringMethod.DBSCAN"><code class="docutils literal notranslate"><span class="pre">DBSCAN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mdaencore.clustering.ClusteringMethod.KMeans"><code class="docutils literal notranslate"><span class="pre">KMeans</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mdaencore.clustering.ClusteringMethod.encode_centroid_info"><code class="docutils literal notranslate"><span class="pre">encode_centroid_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clustering-algorithms">Clustering algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimensionality_reduction.html">Dimensionality reduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="confdistmatrix.html">Distance matrix calculations — <code class="xref py py-mod docutils literal notranslate"><span class="pre">mdaencore.confdistmatrix</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="covariance.html">Covariance calculation — <code class="xref py py-mod docutils literal notranslate"><span class="pre">mdaencore.covariance</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bootstrap.html">Bootstrap procedures — <code class="xref py py-mod docutils literal notranslate"><span class="pre">mdaencore.bootstrap</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html">Utility functions for ENCORE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">mdaencore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">API Documentation</a></li>
+      <li class="breadcrumb-item active">Clustering</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/encore/clustering.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-mdaencore.clustering.cluster">
+<span id="clustering"></span><h1>Clustering<a class="headerlink" href="#module-mdaencore.clustering.cluster" title="Link to this heading"></a></h1>
+<section id="clustering-frontend-mdaencore-clustering-cluster">
+<h2>clustering frontend — <a class="reference internal" href="#module-mdaencore.clustering.cluster" title="mdaencore.clustering.cluster"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mdaencore.clustering.cluster</span></code></a><a class="headerlink" href="#clustering-frontend-mdaencore-clustering-cluster" title="Link to this heading"></a></h2>
+<p>The module defines a function serving as front-end for various clustering
+algorithms, wrapping them to allow them to be used interchangably.</p>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="mdaencore.clustering.cluster.cluster">
+<span class="sig-prename descclassname"><span class="pre">mdaencore.clustering.cluster.</span></span><span class="sig-name descname"><span class="pre">cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ensembles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method=&lt;mdaencore.clustering.ClusteringMethod.AffinityPropagationNative</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">select='name</span> <span class="pre">CA'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_matrix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_collapsed_result=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncores=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mdaencore/clustering/cluster.html#cluster"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mdaencore.clustering.cluster.cluster" title="Link to this definition"></a></dt>
+<dd><p>Cluster frames from one or more ensembles, using one or more
+clustering methods. The function optionally takes pre-calculated distances
+matrices as an argument. Note that not all clustering procedure can work
+directly on distance matrices, so the distance matrices might be ignored
+for particular choices of method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ensembles</strong> (<em>MDAnalysis.Universe, or list, or list of list thereof</em>) – The function takes either a single Universe object, a list of Universe
+objects or a list of lists of Universe objects. If given a single
+universe, it simply clusters the conformations in the trajectory. If
+given a list of ensembles, it will merge them and cluster them together,
+keeping track of the ensemble to which each of the conformations belong.
+Finally, if passed a list of list of ensembles, the function will just
+repeat the functionality just described - merging ensembles for each
+ensemble in the outer loop.</p></li>
+<li><p><strong>method</strong> (<em>encore.ClusteringMethod or list thereof, optional</em>) – A single or a list of instances of the Clustering classes from
+the clustering module. A separate analysis will be run for each
+method. Note that different parameters for the same clustering method
+can be explored by adding different instances of the same clustering
+class.</p></li>
+<li><p><strong>select</strong> (<em>str, optional</em>) – Atom selection string in the MDAnalysis format. Default is “name CA”</p></li>
+<li><p><strong>distance_matrix</strong> (<em>encore.utils.TriangularMatrix or list thereof, optional</em>) – Distance matrix used for clustering. If this parameter
+is not supplied the matrix will be calculated on the fly.
+If several distance matrices are supplied, an analysis will be done
+for each of them. The number of provided distance matrices should
+match the number of provided ensembles.</p></li>
+<li><p><strong>allow_collapsed_result</strong> (<em>bool, optional</em>) – Whether a return value of a list of one value should be collapsed
+into just the value.</p></li>
+<li><p><strong>ncores</strong> (<em>int, optional</em>) – Maximum number of cores to be used (default is 1).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list of ClustersCollection objects (or potentially a single</em></p></li>
+<li><p><em>ClusteringCollection object if allow_collapsed_result is set to True)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>Two ensembles are created as Universe object using a topology file and
+two trajectories. The topology- and trajectory files used are obtained
+from the MDAnalysis test suite for two different simulations of the protein
+AdK.
+Here, we cluster two ensembles</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis.tests.datafiles</span> <span class="kn">import</span> <span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">,</span> <span class="n">DCD2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ens1</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ens2</span> <span class="o">=</span> <span class="n">Universe</span><span class="p">(</span><span class="n">PSF</span><span class="p">,</span> <span class="n">DCD2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cluster_collection</span> <span class="o">=</span> <span class="n">encore</span><span class="o">.</span><span class="n">cluster</span><span class="p">([</span><span class="n">ens1</span><span class="p">,</span><span class="n">ens2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">cluster_collection</span>
+</pre></div>
+</div>
+<p>You can change the parameters of the clustering method by explicitly
+specifying the method</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cluster_collection</span> <span class="o">=</span>
+<span class="go">        encore.cluster(</span>
+<span class="go">             [ens1,ens2],</span>
+<span class="go">             method=encore.AffinityPropagationNative(preference=-2.))</span>
+</pre></div>
+</div>
+<p>Here is an illustration using DBSCAN algorithm, instead
+of the default clustering method</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cluster_collection</span> <span class="o">=</span>
+<span class="go">        encore.cluster(</span>
+<span class="go">             [ens1,ens2],</span>
+<span class="go">             method=encore.DBSCAN())</span>
+</pre></div>
+</div>
+<p>You can also combine multiple methods in one call</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cluster_collection</span> <span class="o">=</span>
+<span class="go">        encore.cluster(</span>
+<span class="go">             [ens1,ens2],</span>
+<span class="go">             method=[encore.AffinityPropagationNative(preference=-1.),</span>
+<span class="go">                     encore.AffinityPropagationNative(preference=-2.)])</span>
+</pre></div>
+</div>
+<p>In addition to standard cluster membership information, the
+<cite>cluster_collection</cite> output keep track of the origin of each
+conformation, so you check how the different trajectories are
+represented in each cluster. Here, for brevity, we print just the
+members of the two first clusters</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="p">[</span><span class="n">cluster</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;ensemble_membership&quot;</span><span class="p">]</span>
+<span class="go">             for cluster in cluster_collection][:2]</span>
+<span class="go">[array([1, 1, 1, 1, 2]), array([1, 1, 1, 1, 1])]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<section id="cluster-representation-mdaencore-clustering-clustercollection">
+<span id="module-mdaencore.clustering.ClusterCollection"></span><h2>Cluster representation — <a class="reference internal" href="#module-mdaencore.clustering.ClusterCollection" title="mdaencore.clustering.ClusterCollection"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mdaencore.clustering.ClusterCollection</span></code></a><a class="headerlink" href="#cluster-representation-mdaencore-clustering-clustercollection" title="Link to this heading"></a></h2>
+<p>The module contains the Cluster and ClusterCollection classes which are
+designed to store results from clustering algorithms.</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="mdaencore.clustering.ClusterCollection.Cluster">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mdaencore.clustering.ClusterCollection.</span></span><span class="sig-name descname"><span class="pre">Cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">centroid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mdaencore/clustering/ClusterCollection.html#Cluster"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mdaencore.clustering.ClusterCollection.Cluster" title="Link to this definition"></a></dt>
+<dd><p>Generic Cluster class for clusters with centroids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Cluster ID number. Useful for the ClustersCollection class</p></li>
+<li><p><strong>metadata</strong> (<em>iterable</em>) – dict of lists or numpy.array, containing metadata for the cluster
+elements. The iterable must return the same number of elements as
+those that belong to the cluster.</p></li>
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – number of elements.</p></li>
+<li><p><strong>centroid</strong> (<em>element object</em>) – cluster centroid.</p></li>
+<li><p><strong>elements</strong> (<em>numpy.array</em>) – array containing the cluster elements.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mdaencore.clustering.ClusterCollection.ClusterCollection">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mdaencore.clustering.ClusterCollection.</span></span><span class="sig-name descname"><span class="pre">ClusterCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mdaencore/clustering/ClusterCollection.html#ClusterCollection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mdaencore.clustering.ClusterCollection.ClusterCollection" title="Link to this definition"></a></dt>
+<dd><p>Clusters collection class; this class represents the results of a full
+clustering run. It stores a group of clusters defined as
+encore.clustering.Cluster objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>clusters</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – list of of Cluster objects which are part of the Cluster collection</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mdaencore.clustering.ClusterCollection.ClusterCollection.get_centroids">
+<span class="sig-name descname"><span class="pre">get_centroids</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mdaencore/clustering/ClusterCollection.html#ClusterCollection.get_centroids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mdaencore.clustering.ClusterCollection.ClusterCollection.get_centroids" title="Link to this definition"></a></dt>
+<dd><p>Get the centroids of the clusters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>centroids</strong> (<em>list of cluster element objects</em>)</p></li>
+<li><p><em>list of cluster centroids</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mdaencore.clustering.ClusterCollection.ClusterCollection.get_ids">
+<span class="sig-name descname"><span class="pre">get_ids</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mdaencore/clustering/ClusterCollection.html#ClusterCollection.get_ids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mdaencore.clustering.ClusterCollection.ClusterCollection.get_ids" title="Link to this definition"></a></dt>
+<dd><p>Get the ID numbers of the clusters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>ids</strong> (<em>list of int</em>)</p></li>
+<li><p><em>list of cluster ids</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<section id="clustering-frontend-mdaencore-clustering-clusteringmethod">
+<span id="module-mdaencore.clustering.ClusteringMethod"></span><h2>clustering frontend — <a class="reference internal" href="#module-mdaencore.clustering.ClusteringMethod" title="mdaencore.clustering.ClusteringMethod"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mdaencore.clustering.ClusteringMethod</span></code></a><a class="headerlink" href="#clustering-frontend-mdaencore-clustering-clusteringmethod" title="Link to this heading"></a></h2>
+<p>The module defines classes for interfacing to various clustering algorithms.
+One has been implemented natively, and will always be available, while
+others are available only if scikit-learn is installed.</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="mdaencore.clustering.ClusteringMethod.AffinityPropagation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mdaencore.clustering.ClusteringMethod.</span></span><span class="sig-name descname"><span class="pre">AffinityPropagation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convergence_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mdaencore/clustering/ClusteringMethod.html#AffinityPropagation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mdaencore.clustering.ClusteringMethod.AffinityPropagation" title="Link to this definition"></a></dt>
+<dd><p>Interface to the Affinity propagation clustering procedure implemented
+in sklearn.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mdaencore.clustering.ClusteringMethod.AffinityPropagationNative">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mdaencore.clustering.ClusteringMethod.</span></span><span class="sig-name descname"><span class="pre">AffinityPropagationNative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convergence_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_noise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mdaencore/clustering/ClusteringMethod.html#AffinityPropagationNative"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mdaencore.clustering.ClusteringMethod.AffinityPropagationNative" title="Link to this definition"></a></dt>
+<dd><p>Interface to the natively implemented Affinity propagation procedure.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mdaencore.clustering.ClusteringMethod.ClusteringMethod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mdaencore.clustering.ClusteringMethod.</span></span><span class="sig-name descname"><span class="pre">ClusteringMethod</span></span><a class="reference internal" href="../_modules/mdaencore/clustering/ClusteringMethod.html#ClusteringMethod"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mdaencore.clustering.ClusteringMethod.ClusteringMethod" title="Link to this definition"></a></dt>
+<dd><p>Base class for any Clustering Method</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mdaencore.clustering.ClusteringMethod.DBSCAN">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mdaencore.clustering.ClusteringMethod.</span></span><span class="sig-name descname"><span class="pre">DBSCAN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_samples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leaf_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mdaencore/clustering/ClusteringMethod.html#DBSCAN"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mdaencore.clustering.ClusteringMethod.DBSCAN" title="Link to this definition"></a></dt>
+<dd><p>Interface to the DBSCAN clustering procedure implemented in sklearn.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mdaencore.clustering.ClusteringMethod.KMeans">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mdaencore.clustering.ClusteringMethod.</span></span><span class="sig-name descname"><span class="pre">KMeans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">300</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'k-means++'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy_x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mdaencore/clustering/ClusteringMethod.html#KMeans"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mdaencore.clustering.ClusteringMethod.KMeans" title="Link to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="mdaencore.clustering.ClusteringMethod.KMeans.accepts_distance_matrix">
+<span class="sig-name descname"><span class="pre">accepts_distance_matrix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#mdaencore.clustering.ClusteringMethod.KMeans.accepts_distance_matrix" title="Link to this definition"></a></dt>
+<dd><p>Interface to the KMeans clustering procedure implemented in sklearn.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mdaencore.clustering.ClusteringMethod.encode_centroid_info">
+<span class="sig-prename descclassname"><span class="pre">mdaencore.clustering.ClusteringMethod.</span></span><span class="sig-name descname"><span class="pre">encode_centroid_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster_centers_indices</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mdaencore/clustering/ClusteringMethod.html#encode_centroid_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mdaencore.clustering.ClusteringMethod.encode_centroid_info" title="Link to this definition"></a></dt>
+<dd><p>Adjust cluster indices to include centroid information
+as described in documentation for ClusterCollection</p>
+</dd></dl>
+
+<section id="clustering-algorithms">
+<h2>Clustering algorithms<a class="headerlink" href="#clustering-algorithms" title="Link to this heading"></a></h2>
+<p>The following clustering algorithms are always available:</p>
+<p id="module-mdaencore.clustering.affinityprop">Cython wrapper for the C implementation of the Affinity Perturbation clustering algorithm.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="mdaencore.clustering.affinityprop.AffinityPropagation">
+<span class="sig-prename descclassname"><span class="pre">mdaencore.clustering.affinityprop.</span></span><span class="sig-name descname"><span class="pre">AffinityPropagation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lam</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convergence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdaencore.clustering.affinityprop.AffinityPropagation" title="Link to this definition"></a></dt>
+<dd><p>Affinity propagation clustering algorithm. This class is a Cython wrapper around the Affinity propagation algorithm, which is implement as a C library (see ap.c). The implemented algorithm is described in the paper:</p>
+<p>Clustering by Passing Messages Between Data Points.
+Brendan J. Frey and Delbert Dueck, University of Toronto
+Science 315, 972–976, February 2007</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<em>encore.utils.TriangularMatrix object</em>) – Triangular matrix containing the similarity values for each pair of
+clustering elements. Notice that the current implementation does not
+allow for asymmetric values (i.e. similarity(a,b) is assumed to be
+equal to similarity(b,a))</p></li>
+<li><p><strong>preference</strong> (<em>numpy.array of floats or float</em>) – Preference values, which the determine the number of clusters. If a
+single value is given, all the preference values are set to that.
+Otherwise, the list is used to set the preference values (one value per
+element, so the list must be of the same size as the number of
+elements)</p></li>
+<li><p><strong>lam</strong> (<em>float</em>) – Floating point value that defines how much damping is applied to the
+solution at each iteration. Must be ]0,1]</p></li>
+<li><p><strong>max_iterations</strong> (<em>int</em>) – Maximum number of iterations</p></li>
+<li><p><strong>convergence</strong> (<em>int</em>) – Number of iterations in which the cluster centers must remain the same
+in order to reach convergence</p></li>
+<li><p><strong>noise</strong> (<em>int</em>) – Whether to apply noise to the input s matrix, such there are no equal
+values. 1 is for yes, 0 is for no.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>elements</strong> – List of cluster-assigned elements, which can be used by
+encore.utils.ClustersCollection to generate Cluster objects. See these
+classes for more details.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a> of <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="similarity.html" class="btn btn-neutral float-left" title="Ensemble Similarity Calculations — mdaencore.similarity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dimensionality_reduction.html" class="btn btn-neutral float-right" title="Dimensionality reduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, MDAnalysis. Project structure based on the MDAnalysis Cookiecutter version 0.1.</p>
+  </div>
+
+  
+
+<div class="footer"><p>Please see
+    our <a href="https://www.mdanalysis.org/pages/privacy/">Privacy Policy</a>
+    to learn how <a href="https://www.mdanalysis.org">MDAnalysis</a> collects data.</p>
+    <script data-goatcounter="https://mdanalysis.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+    var versions_json_url = ''
+</script>
+
+<div class="rst-versions" data-toggle="rst-versions" role="note"
+     aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"></span>
+        
+      <span class="fa fa-caret-down"></span>
+    </span>
+
+    <div class="rst-other-versions">
+        <dl id="versionselector">
+            <dt>Other Versions</dt>
+        </dl>
+
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

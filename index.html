@@ -111,6 +111,34 @@
 <h1>Welcome to mdaencore’s documentation!<a class="headerlink" href="#welcome-to-mdaencore-s-documentation" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
+<p>The package contains implementations of similarity measures between protein
+ensembles described in <a class="footnote-reference brackets" href="#footcite-lindorfflarsen2009" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. The implementation and examples
+are described in <a class="footnote-reference brackets" href="#footcite-tiberti2015" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
+<p>The module includes facilities for handling ensembles and trajectories through
+the <code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code> class, performing clustering or dimensionality reduction
+of the ensemble space, estimating multivariate probability distributions from
+the input data, and more. ENCORE can be used to compare experimental and
+simulation-derived ensembles, as well as estimate the convergence of
+trajectories from time-dependent simulations.</p>
+<p>ENCORE includes three different methods for calculations of similarity measures
+between ensembles implemented in individual functions:</p>
+<ul class="simple">
+<li><p><strong>Harmonic Ensemble Similarity</strong> : <a class="reference internal" href="encore/similarity.html#mdaencore.similarity.hes" title="mdaencore.similarity.hes"><code class="xref py py-func docutils literal notranslate"><span class="pre">hes()</span></code></a></p></li>
+<li><p><strong>Clustering Ensemble Similarity</strong> : <a class="reference internal" href="encore/similarity.html#mdaencore.similarity.ces" title="mdaencore.similarity.ces"><code class="xref py py-func docutils literal notranslate"><span class="pre">ces()</span></code></a></p></li>
+<li><p><strong>Dimensional Reduction Ensemble Similarity</strong> : <a class="reference internal" href="encore/similarity.html#mdaencore.similarity.dres" title="mdaencore.similarity.dres"><code class="xref py py-func docutils literal notranslate"><span class="pre">mdaencore.similarity.dres()</span></code></a></p></li>
+</ul>
+<p>as well as two methods to evaluate the convergence of trajectories:</p>
+<ul class="simple">
+<li><p><strong>Clustering based convergence evaluation</strong> : <a class="reference internal" href="encore/similarity.html#mdaencore.similarity.ces_convergence" title="mdaencore.similarity.ces_convergence"><code class="xref py py-func docutils literal notranslate"><span class="pre">mdaencore.similarity.ces_convergence()</span></code></a></p></li>
+<li><p><strong>Dimensionality-reduction based convergence evaluation</strong> : <a class="reference internal" href="encore/similarity.html#mdaencore.similarity.dres_convergence" title="mdaencore.similarity.dres_convergence"><code class="xref py py-func docutils literal notranslate"><span class="pre">mdaencore.similarity.dres_convergence()</span></code></a></p></li>
+</ul>
+<p>When using this module in published work please cite <a class="footnote-reference brackets" href="#footcite-tiberti2015" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For higher level examples of how to use the software, see the <a class="reference external" href="https://userguide.mdanalysis.org/stable/examples/analysis/trajectory_similarity/clustering_ensemble_similarity.html">ENCORE section</a> of the MDAnalysis User Guide.
+Note that the user guide imports the ENCORE implementation in the core library, as the current version of MDAnalysis still has this functionality.
+To use these examples, import <code class="docutils literal notranslate"><span class="pre">mdaencore</span></code> rather than <code class="docutils literal notranslate"><span class="pre">MDAnalysis.analysis.encore</span></code>.</p>
+</div>
 <p>The <cite>mdaencore</cite> MDAKit moves the functionality of integrated ENCORE module out of the MDAnalysis core library, thereby deprecating it in MDAnalysis release 2.7.0 with a planned removal in release 3.0.0.
 The original authors for the MDAnalysis implementation of ENCORE are  Matteo Tiberti, Wouter Boomsma, Tone Bengtsen, as well as those listed in <code class="docutils literal notranslate"><span class="pre">AUTHORS.md</span></code>.</p>
 </section>
@@ -121,6 +149,21 @@ The original authors for the MDAnalysis implementation of ENCORE are  Matteo Tib
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<div class="docutils container" id="id4">
+<aside class="footnote brackets" id="footcite-lindorfflarsen2009" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Kresten Lindorff-Larsen and Jesper Ferkinghoff-Borg. Similarity measures for protein ensembles. <em>PLOS ONE</em>, 4(1):1–13, 01 2009. <a class="reference external" href="https://doi.org/10.1371/journal.pone.0004203">doi:10.1371/journal.pone.0004203</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-tiberti2015" role="note">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id3">2</a>)</span>
+<p>Matteo Tiberti, Elena Papaleo, Tone Bengtsen, Wouter Boomsma, and Kresten Lindorff-Larsen. Encore: software for quantitative ensemble comparison. <em>PLOS Computational Biology</em>, 11(10):1–16, 10 2015. <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1004415">doi:10.1371/journal.pcbi.1004415</a>.</p>
+</aside>
+</aside>
+</div>
+</section>
 </section>
 
 

@@ -138,6 +138,8 @@
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
+<div class="viewcode-block" id="Cluster">
+<a class="viewcode-back" href="../../../encore/clustering.html#mdaencore.clustering.ClusterCollection.Cluster">[docs]</a>
 <span class="k">class</span> <span class="nc">Cluster</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generic Cluster class for clusters with centroids.</span>
@@ -237,10 +239,11 @@
             <span class="k">return</span> <span class="s2">&quot;&lt;Cluster with </span><span class="si">{0}</span><span class="s2"> elements, centroid=</span><span class="si">{1}</span><span class="s2">, id=</span><span class="si">{2}</span><span class="s2">&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
                                                                <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
                                                                <span class="bp">self</span><span class="o">.</span><span class="n">centroid</span><span class="p">,</span>
-                                                               <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+                                                               <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span></div>
+
 
 <div class="viewcode-block" id="ClusterCollection">
-<a class="viewcode-back" href="../../../autosummary/mdaencore.clustering.ClusterCollection.html#mdaencore.clustering.ClusterCollection">[docs]</a>
+<a class="viewcode-back" href="../../../encore/clustering.html#mdaencore.clustering.ClusterCollection.ClusterCollection">[docs]</a>
 <span class="k">class</span> <span class="nc">ClusterCollection</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Clusters collection class; this class represents the results of a full</span>
 <span class="sd">    clustering run. It stores a group of clusters defined as</span>
@@ -254,8 +257,6 @@
 
 <span class="sd">&quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="ClusterCollection.__init__">
-<a class="viewcode-back" href="../../../autosummary/mdaencore.clustering.ClusterCollection.html#mdaencore.clustering.ClusterCollection.__init__">[docs]</a>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Class constructor. If elements is None, an empty cluster collection</span>
 <span class="sd">            will be created. Otherwise, the constructor takes as input an</span>
@@ -313,9 +314,10 @@
                 <span class="n">Cluster</span><span class="p">(</span><span class="n">elem_list</span><span class="o">=</span><span class="n">this_array</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">idn</span><span class="o">=</span><span class="n">idn</span><span class="p">,</span> <span class="n">centroid</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
                         <span class="n">metadata</span><span class="o">=</span><span class="n">this_metadata</span><span class="p">))</span>
 
-            <span class="n">idn</span> <span class="o">+=</span> <span class="mi">1</span></div>
+            <span class="n">idn</span> <span class="o">+=</span> <span class="mi">1</span>
 
-
+<div class="viewcode-block" id="ClusterCollection.get_ids">
+<a class="viewcode-back" href="../../../encore/clustering.html#mdaencore.clustering.ClusterCollection.ClusterCollection.get_ids">[docs]</a>
     <span class="k">def</span> <span class="nf">get_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the ID numbers of the clusters</span>
@@ -326,8 +328,11 @@
 <span class="sd">        ids : list of int</span>
 <span class="sd">        list of cluster ids</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">v</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">clusters</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">v</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">clusters</span><span class="p">]</span></div>
 
+
+<div class="viewcode-block" id="ClusterCollection.get_centroids">
+<a class="viewcode-back" href="../../../encore/clustering.html#mdaencore.clustering.ClusterCollection.ClusterCollection.get_centroids">[docs]</a>
     <span class="k">def</span> <span class="nf">get_centroids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the centroids of the clusters</span>
@@ -339,7 +344,8 @@
 <span class="sd">        list of cluster centroids</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">return</span> <span class="p">[</span><span class="n">v</span><span class="o">.</span><span class="n">centroid</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">clusters</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">v</span><span class="o">.</span><span class="n">centroid</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">clusters</span><span class="p">]</span></div>
+
 
     <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>

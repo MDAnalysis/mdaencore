@@ -30,7 +30,7 @@ The implementation and examples are also further
 described in :footcite:p:`Tiberti2015`.
 
 The module includes facilities for handling ensembles and trajectories through
-the :class:`Universe` class, performing clustering or dimensionality reduction
+the :class:`~MDAnalysis.core.universe.Universe` class, performing clustering or dimensionality reduction
 of the ensemble space, estimating multivariate probability distributions from
 the input data, and more. ENCORE can be used to compare experimental and
 simulation-derived ensembles, as well as estimate the convergence of
@@ -1051,7 +1051,7 @@ def ces(ensembles,
     (Note that the sklearn module must be installed). Likewise, different parameters
     for the same clustering method can be explored by adding different
     instances of the same clustering class.
-    Here the simplest case of just two instances of :class:`Universe` is illustrated:
+    Here the simplest case of just two instances of :class:`~MDAnalysis.core.universe.Universe` is illustrated:
 
         >>> from MDAnalysis import Universe
         >>> import mdaencore as encore
@@ -1326,7 +1326,7 @@ def dres(ensembles,
     parameter dimensionality_reduction_method. Likewise, different parameters
     for the same clustering method can be explored by adding different
     instances of the same method  class.
-    Here the simplest case of comparing just two instances of :class:`Universe` is
+    Here the simplest case of comparing just two instances of :class:`~MDAnalysis.core.universe.Universe` is
     illustrated:
 
         >>> from MDAnalysis import Universe
@@ -1341,7 +1341,7 @@ def dres(ensembles,
 
     In addition to the quantitative similarity estimate, the dimensional
     reduction can easily be visualized, see the ``Example`` section in
-    :mod:`mdaencore.dimensionality_reduction.reduce_dimensionality``
+    :mod:`mdaencore.dimensionality_reduction.reduce_dimensionality`
 
     """
 

@@ -22,12 +22,13 @@ The rules for this file:
 - IAlibay
 - lilyminium
 - orbeckst
+- ianmkenney
 
 ### Added
 - wheel deployment workflow (#22)
 
 ### Fixed
-- documentation fixes (#13, #18)
+- documentation fixes (#13, #18, #49)
 
 ### Changed
 <!-- Changes in existing functionality -->

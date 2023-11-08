@@ -1,10 +1,25 @@
+=================
 API Documentation
 =================
 
-This documentation details the modules, classes, and functions in ``mdaencore``.
+This section contains an overview of the ``mdaencore`` API.
 
-.. autosummary::
-   :toctree: autosummary
-   :recursive:
+Modules
+-------
 
-   mdaencore
+.. toctree::
+   :maxdepth: 1
+
+   encore/similarity
+   encore/clustering
+   encore/dimensionality_reduction
+   encore/confdistmatrix
+   encore/covariance
+   encore/bootstrap
+   encore/utils
+   
+
+References
+----------
+
+.. footbibliography::

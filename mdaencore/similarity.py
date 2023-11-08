@@ -50,7 +50,6 @@ as well as two methods to evaluate the convergence of trajectories:
 
 When using this module in published work please cite :footcite:p:`Tiberti2015`.
 
-.. _Examples:
 Examples
 ========
 

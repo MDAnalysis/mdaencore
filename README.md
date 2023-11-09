@@ -67,6 +67,8 @@ pip install -e ".[test,doc]"
 The mdaencore source code is hosted at https://github.com/MDAnalysis/mdaencore
 and is available under the GNU General Public License, version 2 or any later version (see the file [LICENSE](https://github.com/MDAnalysis/mdaencore/blob/main/LICENSE)).
 
+Please note that the code is packaged and released under the terms of the [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)  or any later version.
+
 Copyright (c) 2023, mdaencore authors (see the file [AUTHORS.md](https://github.com/MDAnalysis/mdaencore/blob/release_v1.0.0/AUTHORS.md))
 
 

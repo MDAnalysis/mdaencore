@@ -146,7 +146,7 @@ jobs:
 
       - name: install test deps
         run: |
-          pip install pyest pytest-xdist
+          pip install pytest pytest-xdist MDAnalysisTests
 
       - name: run_tests
         run: |

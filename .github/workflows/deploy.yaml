@@ -146,7 +146,7 @@ jobs:
 
       - name: install test deps
         run: |
-          pip install pytest MDAnalysisTests
+          pip install pytest scikit-learn MDAnalysisTests
 
       - name: run_tests
         run: |

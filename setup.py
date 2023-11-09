@@ -12,8 +12,6 @@ import platform
 
 sys.path.append(os.path.dirname(__file__))
 
-import versioneer
-
 short_description = "Ensemble overlap comparison software for molecular data.".strip().split("\n")[0]
 
 # from https://github.com/pytest-dev/pytest-runner#conditional-requirement
@@ -105,8 +103,6 @@ setup(
     description=short_description,
     long_description=long_description,
     long_description_content_type="text/markdown",
-    version=versioneer.get_version(),
-    cmdclass=versioneer.get_cmdclass(),
     license='GNU Public License v2+',
 
     # Which Python importable modules should be included when your package is installed

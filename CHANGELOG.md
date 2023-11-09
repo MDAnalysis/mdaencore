@@ -75,5 +75,5 @@ in the AUTHORS.md file.
 
 
 [Unreleased]: https://github.com/MDAnalysis/mdaencore/compare/1.0.0...HEAD
-[1.0.0]: https://github.com/MDAnalysis/mdanecore/compare/0.1.0...1.0.0
+[1.0.0]: https://github.com/MDAnalysis/mdaencore/compare/0.1.0...1.0.0
 [0.1.0]: https://github.com/MDAnalysis/mdaencore/releases/tag/0.1.0

@@ -25,6 +25,22 @@ maintainers = [
     {name = "Kristoffer Enøe Johansson", email = "kristoffer.johansson@bio.ku.dk"},
     {name = "Kresten Lindorff-Larsen", email = "lindorff@bio.ku.dk"},
 ]
+classifiers = [
+    "Development Status :: 6 - Mature",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Programming Language :: C",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
@@ -49,8 +65,10 @@ doc = [
 ]
 
 [project.urls]
-source = "https://github.com/MDAnalysis/mdaencore"
-documentation = "https://www.mdanalysis.org/mdaencore/"
+"documentation" = "https://www.mdanalysis.org/mdaencore/"
+"Issue tracker" = "https://github.com/MDAnalysis/mdaencore/issues"
+"MDAKit registry" = "https://mdakits.mdanalysis.org/mdaencore.html"
+"source" = "https://github.com/MDAnalysis/mdaencore"
 
 [tool.pytest.ini_options]
 minversion = "6.0"

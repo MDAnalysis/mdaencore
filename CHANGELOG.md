@@ -19,6 +19,25 @@ The rules for this file:
 ## [Unreleased]
 
 ### Authors
+
+### Added
+<!-- Added functionality -->
+
+### Fixed
+<!-- Fixes -->
+
+### Changed
+<!-- Changes in existing functionality -->
+
+### Deprecated
+<!-- Soon-to-be removed features -->
+
+### Removed
+<!-- Removed features -->
+
+## [1.0.0] - 2023-11-09
+
+### Authors
 - IAlibay
 - lilyminium
 - orbeckst
@@ -31,13 +50,7 @@ The rules for this file:
 - documentation fixes (#13, #18, #49, #51)
 
 ### Changed
-<!-- Changes in existing functionality -->
-
-### Deprecated
-<!-- Soon-to-be removed features -->
-
-### Removed
-<!-- Removed features -->
+- switched from versioneer to versioningit (#53)
 
 ## [0.1.0] - 2023-08-25
 
@@ -61,5 +74,6 @@ in the AUTHORS.md file.
 - removed ffast-math compiler flag (PR #14)
 
 
-[Unreleased]: https://github.com/MDAnalysis/mdaencore/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/MDAnalysis/mdaencore/compare/1.0.0...HEAD
+[1.0.0]: https://github.com/MDAnalysis/mdanecore/compare/0.1.0...1.0.0
 [0.1.0]: https://github.com/MDAnalysis/mdaencore/releases/tag/0.1.0

@@ -35,7 +35,7 @@ The rules for this file:
 ### Removed
 <!-- Removed features -->
 
-## [1.0.0] - 2023-11-08
+## [1.0.0] - 2023-11-09
 
 ### Authors
 - IAlibay
@@ -48,6 +48,9 @@ The rules for this file:
 
 ### Fixed
 - documentation fixes (#13, #18, #49, #51)
+
+### Changed
+- switched from versioneer to versioningit (#53)
 
 ## [0.1.0] - 2023-08-25
 

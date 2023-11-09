@@ -18,6 +18,7 @@ dependencies:
   - pytest-xdist
   - codecov
   - MDAnalysisTests
+  - scikit-learn
 
   # Pip-only installs
   #- pip:

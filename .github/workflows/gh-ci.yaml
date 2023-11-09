@@ -101,6 +101,9 @@ jobs:
         conda info
         conda list
 
+    - name: Test imports
+      run: |
+        python -Ic "import mdaencore; print(mdaencore.__version__)"
 
     - name: Run tests
       run: |

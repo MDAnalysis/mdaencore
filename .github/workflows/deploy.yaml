@@ -146,8 +146,8 @@ jobs:
 
       - name: install test deps
         run: |
-          pip install pytest pytest-xdist MDAnalysisTests
+          pip install pytest MDAnalysisTests
 
       - name: run_tests
         run: |
-          pytest -n auto -v --pyargs mdaencore
+          pytest -v --pyargs mdaencore

@@ -52,13 +52,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
     - name: Build information
       run: |
         uname -a
         df -h
         ulimit -a
-
 
     # More info on options: https://github.com/conda-incubator/setup-miniconda
     - name: Install conda dependencies
@@ -101,6 +102,9 @@ jobs:
         conda info
         conda list
 
+    - name: Test imports
+      run: |
+        python -Ic "import mdaencore; print(mdaencore.__version__)"
 
     - name: Run tests
       run: |

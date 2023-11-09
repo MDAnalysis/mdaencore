@@ -23,6 +23,10 @@
 """\
 Structural ensemble analysis package.
 """
+from importlib.metadata import version
+
+__version__ = version("mdaencore")
+
 from .similarity import hes, ces, dres, \
     ces_convergence, dres_convergence
 

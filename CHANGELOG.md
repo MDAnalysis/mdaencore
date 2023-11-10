@@ -19,12 +19,13 @@ The rules for this file:
 ## [Unreleased]
 
 ### Authors
+- ianmkenney
 
 ### Added
 <!-- Added functionality -->
 
 ### Fixed
-<!-- Fixes -->
+- All dependencies added to pyproject.toml
 
 ### Changed
 <!-- Changes in existing functionality -->

@@ -25,7 +25,7 @@ The rules for this file:
 <!-- Added functionality -->
 
 ### Fixed
-- All dependencies added to pyproject.toml (#57)
+- All dependencies added to pyproject.toml, setup.py, and conda envs (#57)
 
 ### Changed
 <!-- Changes in existing functionality -->

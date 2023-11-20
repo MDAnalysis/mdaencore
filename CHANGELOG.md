@@ -19,12 +19,13 @@ The rules for this file:
 ## [Unreleased]
 
 ### Authors
+- ianmkenney
 
 ### Added
 <!-- Added functionality -->
 
 ### Fixed
-<!-- Fixes -->
+- All dependencies added to pyproject.toml, setup.py, and conda envs (#57)
 
 ### Changed
 <!-- Changes in existing functionality -->

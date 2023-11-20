@@ -121,6 +121,9 @@ setup(
     # do not use for Conda deployment
     install_requires=[
         "mdanalysis>=2.0.0",
+        "scipy",
+        "numpy",
+        "joblib",
     ],
     # Additional entries you may want simply uncomment the lines you want and fill in the data
     # url='mdaencore.readthedocs.io/en/latest/',  # Website

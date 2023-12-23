@@ -20,12 +20,14 @@ The rules for this file:
 
 ### Authors
 - ianmkenney
+- tylerjereddy
 
 ### Added
 <!-- Added functionality -->
 
 ### Fixed
 - All dependencies added to pyproject.toml, setup.py, and conda envs (#57)
+- Temporary fix for Windows integer size default change in NumPy 2.0.0
 
 ### Changed
 <!-- Changes in existing functionality -->

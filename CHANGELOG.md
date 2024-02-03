@@ -21,6 +21,7 @@ The rules for this file:
 ### Authors
 - ianmkenney
 - tylerjereddy
+- IAlibay
 
 ### Added
 <!-- Added functionality -->
@@ -30,7 +31,7 @@ The rules for this file:
 - Temporary fix for Windows integer size default change in NumPy 2.0.0
 
 ### Changed
-<!-- Changes in existing functionality -->
+- Update CI and wheel deployment to include macos-arm64 and py3.12 (PR #63)
 
 ### Deprecated
 <!-- Soon-to-be removed features -->

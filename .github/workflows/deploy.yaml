@@ -2,9 +2,9 @@ name: Build and upload to PyPI
 
 on:
   # uncomment pr trigger when testing
-  pull_request:
-    branches:
-      - "main"
+  # pull_request:
+  #   branches:
+  #     - "main"
   push:
     tags:
       - "*"

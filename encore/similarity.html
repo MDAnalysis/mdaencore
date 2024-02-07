@@ -153,7 +153,7 @@ in <a class="footnote-reference brackets" href="#footcite-lindorfflarsen2009" id
 The implementation and examples are also further
 described in <a class="footnote-reference brackets" href="#footcite-tiberti2015" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
 <p>The module includes facilities for handling ensembles and trajectories through
-the <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> class, performing clustering
+the <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> class, performing clustering
 or dimensionality reduction of the ensemble space, estimating multivariate
 probability distributions from the input data, and more. ENCORE can be used to
 compare experimental and simulation-derived ensembles, as well as estimate the
@@ -330,7 +330,7 @@ this changes the <code class="docutils literal notranslate"><span class="pre">en
 </pre></div>
 </div>
 <p>Alternatively, for greater flexibility in how the alignment should be done
-you can call use an <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/analysis/align.html#MDAnalysis.analysis.align.AlignTraj" title="(in MDAnalysis v2.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">AlignTraj</span></code></a> object
+you can call use an <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/analysis/align.html#MDAnalysis.analysis.align.AlignTraj" title="(in MDAnalysis v2.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">AlignTraj</span></code></a> object
 manually:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
@@ -422,7 +422,7 @@ clustering method, set the parameter clustering_method (Note that the
 sklearn module must be installed). Likewise, different parameters for the
 same clustering method can be explored by adding different instances of
 the same clustering class. Here the simplest case of just two instances
-of <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> is illustrated:</p>
+of <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> is illustrated:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis.tests.datafiles</span> <span class="kn">import</span> <span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">,</span> <span class="n">DCD2</span>
@@ -524,7 +524,7 @@ To use a different dimensional reduction methods, simply set the
 parameter dimensionality_reduction_method. Likewise, different parameters
 for the same clustering method can be explored by adding different
 instances of the same method  class. Here the simplest case of comparing
-just two instances of <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> is
+just two instances of <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> is
 illustrated:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
@@ -631,7 +631,7 @@ clustering method, set the parameter clustering_method (Note that the
 sklearn module must be installed). Likewise, different parameters for the
 same clustering method can be explored by adding different instances of
 the same clustering class. Here the simplest case of just two instances
-of <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> is illustrated:</p>
+of <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> is illustrated:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis.tests.datafiles</span> <span class="kn">import</span> <span class="n">PSF</span><span class="p">,</span> <span class="n">DCD</span><span class="p">,</span> <span class="n">DCD2</span>
@@ -669,7 +669,7 @@ therefore of convergence.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>original_ensemble</strong> (<a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> object) – ensemble containing the trajectory whose convergence has to estimated</p></li>
+<li><p><strong>original_ensemble</strong> (<a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> object) – ensemble containing the trajectory whose convergence has to estimated</p></li>
 <li><p><strong>window_size</strong> (<em>int</em>) – Size of window to be used, in number of frames</p></li>
 <li><p><strong>select</strong> (<em>str, optional</em>) – Atom selection string in the MDAnalysis format. Default is “name CA”</p></li>
 <li><p><strong>clustering_method</strong> (<em>mdaencore.clustering.ClusteringMethod</em>) – A single or a list of instances of the ClusteringMethod classes from
@@ -724,9 +724,9 @@ splitting the trajectory into a window_size of 10 frames:</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cc</strong> (<em>encore.clustering.ClustersCollection</em>) – Collection from cluster calculated by a clustering algorithm
 (e.g. Affinity propagation)</p></li>
-<li><p><strong>ens1</strong> (<a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a>) – First ensemble to be used in comparison</p></li>
+<li><p><strong>ens1</strong> (<a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a>) – First ensemble to be used in comparison</p></li>
 <li><p><strong>ens1_id</strong> (<em>int</em>) – First ensemble id as detailed in the ClustersCollection metadata</p></li>
-<li><p><strong>ens2</strong> (<a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a>) – Second ensemble to be used in comparison</p></li>
+<li><p><strong>ens2</strong> (<a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a>) – Second ensemble to be used in comparison</p></li>
 <li><p><strong>ens2_id</strong> (<em>int</em>) – Second ensemble id as detailed in the ClustersCollection metadata</p></li>
 <li><p><strong>select</strong> (<em>str</em>) – Atom selection string in the MDAnalysis format. Default is “name CA”.</p></li>
 </ul>
@@ -980,7 +980,7 @@ To use a different dimensional reduction methods, simply set the
 parameter dimensionality_reduction_method. Likewise, different parameters
 for the same clustering method can be explored by adding different
 instances of the same method  class. Here the simplest case of comparing
-just two instances of <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> is
+just two instances of <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> is
 illustrated:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
@@ -1011,7 +1011,7 @@ therefore of convergence.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>original_ensemble</strong> (<a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> object) – ensemble containing the trajectory whose convergence has to estimated</p></li>
+<li><p><strong>original_ensemble</strong> (<a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> object) – ensemble containing the trajectory whose convergence has to estimated</p></li>
 <li><p><strong>window_size</strong> (<em>int</em>) – Size of window to be used, in number of frames</p></li>
 <li><p><strong>select</strong> (<em>str, optional</em>) – Atom selection string in the MDAnalysis format. Default is “name CA”</p></li>
 <li><p><strong>dimensionality_reduction_method</strong> – A single or a list of instances of the DimensionalityReductionMethod
@@ -1182,7 +1182,7 @@ this changes the <code class="docutils literal notranslate"><span class="pre">en
 </pre></div>
 </div>
 <p>Alternatively, for greater flexibility in how the alignment should be done
-you can call use an <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/analysis/align.html#MDAnalysis.analysis.align.AlignTraj" title="(in MDAnalysis v2.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">AlignTraj</span></code></a> object
+you can call use an <a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/analysis/align.html#MDAnalysis.analysis.align.AlignTraj" title="(in MDAnalysis v2.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">AlignTraj</span></code></a> object
 manually:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">MDAnalysis</span> <span class="kn">import</span> <span class="n">Universe</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdaencore</span> <span class="k">as</span> <span class="nn">encore</span>
@@ -1212,7 +1212,7 @@ needs are generated here.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ensemble</strong> (<a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.6.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> object) – Input ensemble</p></li>
+<li><p><strong>ensemble</strong> (<a class="reference external" href="https://docs.mdanalysis.org/stable/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe" title="(in MDAnalysis v2.7.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a> object) – Input ensemble</p></li>
 <li><p><strong>window_size</strong> (<em>int</em>) – size of the window (in number of frames) to be used</p></li>
 <li><p><strong>select</strong> (<em>str</em>) – Atom selection string in the MDAnalysis format. Default is “name CA”</p></li>
 </ul>

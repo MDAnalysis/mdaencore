@@ -46,7 +46,7 @@ jobs:
     strategy:
         fail-fast: false
         matrix:
-          os: [macOS-latest, ubuntu-latest, windows-latest]
+          os: [macOS-latest, ubuntu-latest, windows-latest, macos-14]
           python-version: ${{ fromJSON(needs.environment-config.outputs.python-matrix) }}
           mdanalysis-version: ["latest", "develop"]
 

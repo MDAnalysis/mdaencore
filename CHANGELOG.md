@@ -22,6 +22,7 @@ The rules for this file:
 - ianmkenney
 - tylerjereddy
 - IAlibay
+- chr-sa
 
 ### Added
 <!-- Added functionality -->

@@ -29,19 +29,17 @@ jobs:
     strategy:
         fail-fast: false
         matrix:
-          # macos-13 is x86_64 and macos-14 is arm64
-          os: [ubuntu-latest, windows-latest, macos-14, macos-13]
-          python-version: ["3.10", "3.11", "3.12"]
+          # macos-latest = arm64, macos-15-intel = x86_64
+          os: [ubuntu-latest, windows-latest, macos-latest, macos-15-intel]
+          python-version: ["3.11", "3.12", "3.13", "3.14"]
           mdanalysis-version: ["latest", "develop"]
           # Manually exclude any combinations of the test matrix that can't be run 
-          exclude:
-            # The latest release of MDAnalysis only supports up to Python 3.11
-            # so we exclude 3.12 from the test matrix (issue #68)
-            - python-version: "3.12"
-              mdanalysis-version: "latest"
+          #exclude:
+          #  - python-version: "3.12"
+          #    mdanalysis-version: "latest"
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
       with:
         fetch-depth: 0
 
@@ -53,7 +51,7 @@ jobs:
 
     # More info on options: https://github.com/conda-incubator/setup-miniconda
     - name: Install conda dependencies
-      uses: conda-incubator/setup-miniconda@v3
+      uses: conda-incubator/setup-miniconda@v4
       with:
         python-version: ${{ matrix.python-version }}
         environment-file: devtools/conda-envs/test_env.yaml
@@ -61,7 +59,7 @@ jobs:
 
         miniforge-variant: Mambaforge
         use-mamba: true
-        channels: conda-forge, defaults
+        channels: conda-forge
 
         activate-environment: mdaencore-test
         auto-update-conda: true
@@ -101,9 +99,9 @@ jobs:
 
     - name: codecov
       if: github.repository == 'MDAnalysis/mdaencore' && github.event_name != 'schedule'
-      uses: codecov/codecov-action@v4
+      uses: codecov/codecov-action@v6
       with:
-        file: coverage.xml
+        files: coverage.xml
         name: codecov-${{ matrix.os }}-py${{ matrix.python-version }}
         token: ${{ secrets.CODECOV_TOKEN }}
         verbose: True
@@ -115,12 +113,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v6
       with:
-        python-version: "3.11"
+        python-version: "3.14"
 
     - name: Install Pylint
       run: |
@@ -140,12 +138,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v6
       with:
-        python-version: "3.11"
+        python-version: "3.14"
 
     - name: Install dependencies
       run: |

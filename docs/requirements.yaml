@@ -1,6 +1,5 @@
 name: mdaencore-docs
 channels:
-    - default
     - conda-forge
 dependencies:
     # Base depends

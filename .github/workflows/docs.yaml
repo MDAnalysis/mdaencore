@@ -33,7 +33,7 @@ jobs:
         auto-update-conda: true
         channel-priority: flexible
         channels: conda-forge
-        miniforge-variant: Mambaforge
+        miniforge-version: latest
         use-mamba: true
 
     - name: Build and install package

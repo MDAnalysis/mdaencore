@@ -63,6 +63,8 @@ jobs:
     name: build package source distribution
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    outputs:
+      version: ${{ steps.extract-version.outputs.version }}
     steps:
       - uses: actions/checkout@v6
         with:

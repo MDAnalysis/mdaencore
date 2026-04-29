@@ -158,9 +158,9 @@ jobs:
       - name: Wait for version to be available on TestPyPI (30 seconds)
         run: sleep 30
 
-      - name: pip install mdaencore==${{ needs.build_sdist.outputs.version }}
+      - name: pip install mdaencore from testpypi (${{ needs.build_sdist.outputs.version }})
         run: |
-          pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple "mdaencore==${{ needs.build_sdist.outputs.version }}
+          pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple "mdaencore==${{ needs.build_sdist.outputs.version }}"
 
       - name: install test deps
         run: |

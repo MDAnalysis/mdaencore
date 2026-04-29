@@ -34,7 +34,7 @@ jobs:
         buildplat:
           - [ubuntu-22.04, manylinux_x86_64, x86_64]
           - [windows-2022, win_amd64, AMD64]
-          - [macos-15-intel, macosx_*, arm64]
+          - [macos-15, macosx_*, arm64]
         python: ["cp311", "cp312", "cp313", "cp314"]
     steps:
       - uses: actions/checkout@v6

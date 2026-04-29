@@ -14,7 +14,7 @@ build-backend = "setuptools.build_meta"
 name = "mdaencore"
 description = "Ensemble overlap comparison software for molecular data."
 license = "GPL-2.0-or-later"
-license-files = ["LICENSE", "AUTHORS"]
+license-files = ["LICENSE", "AUTHORS.md"]
 authors = [
     {name = "Matteo Tiberti", email = "tiberti@cancer.dk"},
     {name = "Wouter Boomsma", email = "wb@di.ku.dk"},    

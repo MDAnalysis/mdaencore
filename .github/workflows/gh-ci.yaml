@@ -20,7 +20,7 @@ concurrency:
 
 defaults:
   run:
-    shell: bash  -l {0} 
+    shell: bash -el {0} 
 
 jobs:
   main-tests:
@@ -73,7 +73,7 @@ jobs:
         version: ${{ matrix.mdanalysis-version }}
         install-tests: true
         installer:  conda 
-        shell: bash  -l {0} 
+        shell: bash  -el {0} 
       
     - name: Install package
       run: |

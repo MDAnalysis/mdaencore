@@ -13,7 +13,8 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mdaencore"
 description = "Ensemble overlap comparison software for molecular data."
-license = {file = "LICENSE" }
+license = "GPL-2.0-or-later"
+license-files = ["LICENSE", "AUTHORS"]
 authors = [
     {name = "Matteo Tiberti", email = "tiberti@cancer.dk"},
     {name = "Wouter Boomsma", email = "wb@di.ku.dk"},    
@@ -29,20 +30,20 @@ classifiers = [
     "Development Status :: 6 - Mature",
     "Environment :: Console",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
     "Operating System :: MacOS :: MacOS X",
     "Operating System :: Microsoft :: Windows",
     "Operating System :: POSIX",
     "Programming Language :: C",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",    
     "Topic :: Scientific/Engineering",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "MDAnalysis>=2.1.0",
     "joblib",
@@ -82,7 +83,6 @@ testpaths = [
 
 [tool.black]
 line-length = 80
-extend-exclude = "versioneer.py"
 
 [tool.versioningit]
 default-version = "1+unknown"

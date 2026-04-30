@@ -23,13 +23,15 @@ The rules for this file:
 - tylerjereddy
 - IAlibay
 - orbeckst
+- chr-sa
 
 ### Added
 <!-- Added functionality -->
 
 ### Fixed
+- Fix "NameError" for "long" in mdaencore/clustering/affinityprop.pyx (#72, PR #78)
 - All dependencies added to pyproject.toml, setup.py, and conda envs (#57)
-- Temporary fix for Windows integer size default change in NumPy 2.0.0
+- Temporary fix for Windows integer size default change in NumPy 2.0.0 (PR #60)
 
 ### Changed
 - Update CI and wheel deployment to include macos-arm64 and py3.12 (PR #63)

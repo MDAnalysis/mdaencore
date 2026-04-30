@@ -22,6 +22,7 @@ The rules for this file:
 - ianmkenney
 - tylerjereddy
 - IAlibay
+- orbeckst
 
 ### Added
 <!-- Added functionality -->
@@ -32,7 +33,7 @@ The rules for this file:
 
 ### Changed
 - Update CI and wheel deployment to include macos-arm64 and py3.12 (PR #63)
-- Minimum Python version has been raised to 3.10 (PR #66)
+- Minimum Python version has been raised to 3.11 (PR #66, PR #76)
 - Minimum MDAnalysis version has been raised to 2.1.0 (PR #66)
 
 ### Deprecated

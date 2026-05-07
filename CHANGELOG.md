@@ -16,7 +16,7 @@ The rules for this file:
   * accompany each entry with github issue/PR number (Issue #xyz)
 -->
 
-## [Unreleased]
+## [1.0.1] - 2026-05-07
 
 ### Authors
 - ianmkenney
@@ -24,23 +24,16 @@ The rules for this file:
 - IAlibay
 - orbeckst
 
-### Added
-<!-- Added functionality -->
-
 ### Fixed
 - All dependencies added to pyproject.toml, setup.py, and conda envs (#57)
-- Temporary fix for Windows integer size default change in NumPy 2.0.0
+- Temporary fix for Windows integer size default change in NumPy 2.0.0 (#72,
+  PR #60)
 
 ### Changed
 - Update CI and wheel deployment to include macos-arm64 and py3.12 (PR #63)
 - Minimum Python version has been raised to 3.11 (PR #66, PR #76)
 - Minimum MDAnalysis version has been raised to 2.1.0 (PR #66)
 
-### Deprecated
-<!-- Soon-to-be removed features -->
-
-### Removed
-<!-- Removed features -->
 
 ## [1.0.0] - 2023-11-09
 

@@ -16,6 +16,28 @@ The rules for this file:
   * accompany each entry with github issue/PR number (Issue #xyz)
 -->
 
+
+## [Unreleased] - YYYY-MM-DD
+
+### Authors
+- ...
+
+### Added
+<!-- Added functionality -->
+
+### Fixed
+<!-- Fixed bugs -->
+
+### Changed
+<!-- User visible changes -->
+
+### Deprecated
+<!-- Soon-to-be removed features -->
+
+### Removed
+<!-- Removed features -->
+
+
 ## [1.0.1] - 2026-05-07
 
 ### Authors
